@@ -1,0 +1,10 @@
+/* Layout */
+
+body {
+  background: #fffbf5;
+}
+
+/* Menu de Navegação */
+nav.navbar-opacidade {
+  background: rgba(183, 118, 27, 70%);
+}
