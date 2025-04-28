@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
           <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="Logo AgroVision" width="100" />
+            <!-- <img src="assets/img/logo.png" alt="Logo AgroVision" width="100" /> -->
           </a>
 
           <!-- Botão de hamburger para dispositivos móveis -->
@@ -54,6 +54,34 @@
         </div>
       </nav>
     </header>
+
+    <main>
+      <div class="container mt-5 pt-5">
+        <h1 class="text-center">Fale Conosco</h1>
+        <p class="text-center">Estamos aqui para ajudar!</p>
+        <form action="#" method="POST" class="mt-4">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea
+              class="form-control"
+              id="mensagem"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </main>
+
     <footer class="bg-light mt-5 py-3 fixed-bottom">
       <div class="container text-center">
         <p>&copy; 2025 AgroVision - Todos os direitos reservados</p>
