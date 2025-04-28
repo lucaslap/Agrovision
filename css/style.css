@@ -16,7 +16,7 @@
 }
 
 .navbar-nav .nav-link.active{
-  color: #36de3c !important;
+  color: #149d80 !important;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -27,4 +27,26 @@
 
 body {
   background: #ffff;
+}
+
+footer {
+  border-top: 4px solid #0d6efd;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline !important;
+}
+
+footer .bi {
+  font-size: 1.2rem;
+}
+
+footer hr {
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+footer .list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
 }
