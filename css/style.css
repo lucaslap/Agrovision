@@ -61,3 +61,8 @@ footer hr {
 footer .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
 }
+
+.servicos{
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
