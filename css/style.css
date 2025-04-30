@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-.navbar{
+.navbar {
   background: #f0f0f0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.nav-item{
-  font-family: 'Poppins', sans-serif;
+.nav-item {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -19,18 +19,25 @@
   transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link.active{
+.navbar-nav .nav-link.active {
   color: #149d80 !important;
   font-weight: 700;
   text-decoration: underline;
 }
 
-.navbar .nav-link:hover{
-  color:#36de3c  !important;
+.navbar .nav-link:hover {
+  color: #36de3c !important;
 }
 
 body {
   background: #ffff;
+}
+
+/* Zoom Card */
+
+.zoom-card:hover {
+  transition: transform 0.7s;
+  transform: scale(1.1);
 }
 
 footer {
