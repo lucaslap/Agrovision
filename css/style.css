@@ -863,3 +863,21 @@ footer .list-inline-item:not(:last-child) {
     padding: 4rem 0;
   }
 }
+
+/* Estilos para ícones sociais */
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
