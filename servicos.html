@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
           <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="Logo AgroVision" width="100" />
+            <img src="assets/img/logo.svg" alt="Logo AgroVision" width="130" />
           </a>
 
           <!-- Botão de hamburger para dispositivos móveis -->
@@ -37,7 +37,8 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a href="index.html" class="nav-link" aria-current="page"
-                  >Home</a>
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a href="sobre.html" class="nav-link">Sobre Nós</a>
@@ -54,84 +55,93 @@
       </nav>
     </header>
     <main>
-      
-      <div class="servicos container-sm text-center">
-        <h1>Soluções Tecnológicas que Potencializam o Campo</h1>
-        <img src="assets/img/tecnologia-e-agricultura-servicos.jpg" alt="imagem da tecnologia no campo" style=" width: 80%;">
-        <hr>
-
-        <p>Na <strong>AgroVision</strong>, transformamos dados em decisões inteligentes. Nossos serviços combinam tecnologia de ponta, inteligência artificial e sensoriamento remoto para levar sua produção agrícola ao próximo nível:
-          Monitoramento por Satélite</p>
-          <hr>
-
-        <div class="row">
-          <div class="col-md-4">
-        <h2>Diagnóstico Inteligente de Pragas e Doenças via Imagens</h2>
-    
-          <p><strong>Como funciona:</strong> O agricultor tira fotos das plantas via app, e a IA analisa para identificar pragas, doenças ou deficiências nutricionais em tempo real.</p>
-        
-          <p><strong>Tecnologia usada:</strong> Visão computacional e machine learning.</p>
-          
-          <strong>Benefício:</strong> Detecção precoce de problemas, evitando perdas maiores.
-          <hr>
+      <!-- Banner de introdução -->
+      <div class="servicos-banner">
+        <div class="container">
+          <h1 class="fade-in">Soluções Tecnológicas que Potencializam o Campo</h1>
+          <p class="fade-in delay-1">Na <strong>AgroVision</strong>, transformamos dados em decisões inteligentes. Nossos serviços combinam tecnologia de ponta, inteligência artificial e sensoriamento remoto para levar sua produção agrícola ao próximo nível.</p>
         </div>
-
-        <div class="col-md-4">
-        <h2>Previsão de Colheita com IA</h2>
-        <P><strong>Como funciona:</strong>O sistema cruza dados de clima, solo, histórico de produtividade e manejo atual para prever o rendimento da colheita.</P>
-
-          <p><strong>Tecnologia usada:</strong> Modelos preditivos de machine learning. </p>
-          
-          <strong>Benefício:</strong> Melhor planejamento logístico e financeiro da safra.
-          <hr>
-        </div>
-
-        <div class="col-md-4">
-        <h2>Gestão Automatizada de Irrigação Inteligente</h2>
-        <P> <strong>Como funciona: </strong>Integração com sensores de umidade do solo e previsão do tempo para ativar automaticamente a irrigação nas áreas que realmente precisam.</P> 
-
-          <p><strong>Tecnologia usada:</strong> IoT, algoritmos de decisão e controle remoto.</P> 
-          
-          <P><strong> Benefício:</strong> Economia de água e energia, aumento da eficiência.</P> 
-          <hr>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Rastreamento e Telemetria de Máquinas Agrícolas</h2>
-            <p><strong>Como funciona:</strong> Instalação de dispositivos GPS e sensores nas máquinas para monitorar em tempo real a localização, uso, velocidade, consumo de combustível e paradas.</p>
-    
-          <p><strong>Tecnologia usada:</strong> IoT e geolocalização.</p>
-    
-            <p><strong>Benefício:</strong> Redução de desperdícios, furtos e melhor uso da frota.</p>
-              <hr>
-            </div>
-    
-            <div class="col-md-4">
-            <h2>Análise de Dados e Recomendação Automatizada de Ações</h2>
-            <p><strong>Como funciona:</strong> O sistema analisa automaticamente os dados da fazenda e sugere ações práticas, como aumento de fertilização em determinada área, adiamento da colheita ou plantio antecipado.</p>
-    
-            <p><strong>Tecnologia usada:</strong> IA, Big Data e análise geoespacial.</p>
-              
-            <p><strong>Benefício:</strong> Apoio à tomada de decisão baseada em dados e resultados reais.</p>
-          </div>
-    
-          <div class="col-md-4">
-            <h2>Mapa de Calor da Produtividade e Saúde da Lavoura (NDVI e Sensoriamento Remoto)</h2>
-    
-            <p><strong>Como funciona:</strong> Usando imagens de satélite ou drones, o sistema gera mapas de calor (NDVI e outros índices) que mostram a variabilidade da produtividade, saúde da vegetação e anomalias na lavoura.</p>
-
-            <p><strong>Tecnologia usada:</strong> Sensoriamento remoto, imagens NDVI, geoprocessamento e IA.</p>
-
-            <p><strong>Benefício:</strong> Permite ao produtor visualizar áreas com baixa performance, identificar estresse hídrico ou nutricional e tomar decisões localizadas (agricultura de precisão).</p>
-          </div>
-    
-        </div>
-        
-      
       </div>
-    </div>
       
-    
+      <div class="servicos container">
+        <!-- Primeira linha de cards -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4 fade-in delay-1">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-bug"></i>
+              </div>
+              <h2>Diagnóstico Inteligente de Pragas e Doenças</h2>
+              <p><strong>Como funciona:</strong> O agricultor tira fotos das plantas via app, e a IA analisa para identificar pragas, doenças ou deficiências nutricionais em tempo real.</p>
+              <p><strong>Tecnologia usada:</strong> Visão computacional e machine learning.</p>
+              <p><strong>Benefício:</strong> Detecção precoce de problemas, evitando perdas maiores.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 fade-in delay-2">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h2>Previsão de Colheita com IA</h2>
+              <p><strong>Como funciona:</strong> O sistema cruza dados de clima, solo, histórico de produtividade e manejo atual para prever o rendimento da colheita.</p>
+              <p><strong>Tecnologia usada:</strong> Modelos preditivos de machine learning.</p>
+              <p><strong>Benefício:</strong> Melhor planejamento logístico e financeiro da safra.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 fade-in delay-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-droplet"></i>
+              </div>
+              <h2>Gestão Automatizada de Irrigação Inteligente</h2>
+              <p><strong>Como funciona:</strong> Integração com sensores de umidade do solo e previsão do tempo para ativar automaticamente a irrigação nas áreas que realmente precisam.</p>
+              <p><strong>Tecnologia usada:</strong> IoT, algoritmos de decisão e controle remoto.</p>
+              <p><strong>Benefício:</strong> Economia de água e energia, aumento da eficiência.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segunda linha de cards -->
+        <div class="row g-4">
+          <div class="col-md-4 fade-in delay-1">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h2>Rastreamento e Telemetria de Máquinas Agrícolas</h2>
+              <p><strong>Como funciona:</strong> Instalação de dispositivos GPS e sensores nas máquinas para monitorar em tempo real a localização, uso, velocidade, consumo de combustível e paradas.</p>
+              <p><strong>Tecnologia usada:</strong> IoT e geolocalização.</p>
+              <p><strong>Benefício:</strong> Redução de desperdícios, furtos e melhor uso da frota.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 fade-in delay-2">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <h2>Análise de Dados e Recomendação Automatizada</h2>
+              <p><strong>Como funciona:</strong> O sistema analisa automaticamente os dados da fazenda e sugere ações práticas, como aumento de fertilização em determinada área, adiamento da colheita ou plantio antecipado.</p>
+              <p><strong>Tecnologia usada:</strong> IA, Big Data e análise geoespacial.</p>
+              <p><strong>Benefício:</strong> Apoio à tomada de decisão baseada em dados e resultados reais.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 fade-in delay-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-map"></i>
+              </div>
+              <h2>Mapa de Calor da Produtividade (NDVI)</h2>
+              <p><strong>Como funciona:</strong> Usando imagens de satélite ou drones, o sistema gera mapas de calor que mostram a variabilidade da produtividade, saúde da vegetação e anomalias na lavoura.</p>
+              <p><strong>Tecnologia usada:</strong> Sensoriamento remoto, imagens NDVI, geoprocessamento e IA.</p>
+              <p><strong>Benefício:</strong> Permite visualizar áreas com baixa performance e tomar decisões localizadas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container">
