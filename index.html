@@ -502,18 +502,26 @@
         <!-- Links rápidos -->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4">Links Rápidos</h5>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled footer-links">
             <li class="mb-2">
-              <a href="index.html" class="text-white text-decoration-none">Home</a>
+              <a href="index.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Home
+              </a>
             </li>
             <li class="mb-2">
-              <a href="sobre.html" class="text-white text-decoration-none">Sobre Nós</a>
+              <a href="sobre.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Sobre Nós
+              </a>
             </li>
             <li class="mb-2">
-              <a href="servicos.html" class="text-white text-decoration-none">Serviços</a>
+              <a href="servicos.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Serviços
+              </a>
             </li>
             <li class="mb-2">
-              <a href="contato.html" class="text-white text-decoration-none">Fale Conosco</a>
+              <a href="contato.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Fale Conosco
+              </a>
             </li>
           </ul>
         </div>
@@ -541,11 +549,16 @@
           <p class="small">
             Receba novidades e atualizações sobre tecnologias agrícolas
           </p>
-          <form>
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="E-mail" />
-              <button class="btn btn-primary" type="button">Assinar</button>
+          <form id="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="E-mail" required />
+              <button class="btn btn-primary" type="submit" id="newsletter-button">
+                Assinar
+              </button>
             </div>
+            <small id="newsletter-feedback" class="form-text text-light d-none">
+              E-mail cadastrado com sucesso!
+            </small>
           </form>
         </div>
       </div>
@@ -568,6 +581,9 @@
             <li class="list-inline-item">|</li>
             <li class="list-inline-item">
               <a href="#" class="text-white small">Termos de Uso</a>
+            </li>
+            <li class="list-inline-item ms-3">
+              <a href="#" class="back-to-top"><i class="bi bi-arrow-up-circle"></i></a>
             </li>
           </ul>
         </div>

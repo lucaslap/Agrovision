@@ -15,8 +15,17 @@
 }
 
 .navbar {
-  background: #f0f0f0;
+  background-color: rgba(255,255,255,0.9) !important;
+  backdrop-filter: blur(10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar-scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background-color: rgba(255,255,255,0.95) !important;
 }
 
 .nav-item {
@@ -38,6 +47,36 @@
   color: #36de3c !important;
 }
 
+.navbar .nav-item .nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar .nav-item .nav-link:hover::after,
+.navbar .nav-item .nav-link.active::after {
+  width: 80%;
+}
+
+.navbar .nav-item .nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -52,7 +91,43 @@ body {
 }
 
 footer {
+  position: relative;
+  overflow: hidden;
   border-top: 4px solid #0d6efd;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: url('../assets/img/footer-pattern.svg');
+  background-size: cover;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+footer h5 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
 }
 
 footer a:hover {
@@ -71,6 +146,25 @@ footer hr {
 
 footer .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
+}
+
+.footer-links li a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links li a:hover {
+  color: var(--primary-color) !important;
+  transform: translateX(5px);
+}
+
+.footer-links li a i {
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.footer-links li a:hover i {
+  opacity: 1;
 }
 
 .servicos {
@@ -880,4 +974,49 @@ footer .list-inline-item:not(:last-child) {
 .social-icons .social-icon:hover {
   background-color: var(--primary-color);
   transform: translateY(-3px);
+}
+
+/* Estilo para botão de voltar ao topo */
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #fff;
+  color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  .navbar-collapse.show {
+    max-height: 300px;
+  }
+  
+  .navbar-nav {
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
 }

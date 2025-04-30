@@ -54,6 +54,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Animação para contadores de estatísticas
   animateStats();
+
+  // Gerenciamento do formulário de newsletter
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterButton = document.getElementById('newsletter-button');
+  const newsletterFeedback = document.getElementById('newsletter-feedback');
+  
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulação de envio (substitua por chamada real à API)
+      newsletterButton.disabled = true;
+      newsletterButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+      
+      setTimeout(function() {
+        newsletterButton.innerHTML = 'Assinar';
+        newsletterButton.disabled = false;
+        newsletterFeedback.classList.remove('d-none');
+        newsletterFeedback.textContent = 'E-mail cadastrado com sucesso!';
+        newsletterFeedback.className = 'form-text text-success';
+        newsletterForm.reset();
+        
+        // Esconde a mensagem após 5 segundos
+        setTimeout(function() {
+          newsletterFeedback.classList.add('d-none');
+        }, 5000);
+      }, 1500);
+    });
+  }
+
+  // Botão voltar ao topo
+  const backToTop = document.querySelector('.back-to-top');
+  
+  if (backToTop) {
+    backToTop.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Alteração da navbar ao rolar a página
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
 });
 
 // Animação para contadores de estatísticas
