@@ -126,13 +126,19 @@ function animateStats() {
         const duration = 2000; // milissegundos
         const increment = Math.ceil(finalValue / (duration / 30));
         
+        // Obtenha o span antes de iniciar a animação
+        const spanElement = element.querySelector('span');
+        const spanHTML = spanElement ? spanElement.outerHTML : '';
+        
         const counter = setInterval(() => {
           currentValue += increment;
           if (currentValue >= finalValue) {
-            element.textContent = finalValue + (element.querySelector('span') ? element.querySelector('span').outerHTML : '');
+            // Quando atingir o valor final, exiba o número e o símbolo
+            element.innerHTML = finalValue + spanHTML;
             clearInterval(counter);
           } else {
-            element.textContent = currentValue + (element.querySelector('span') ? element.querySelector('span').outerHTML : '');
+            // Durante a contagem, mantenha o símbolo junto
+            element.innerHTML = currentValue + spanHTML;
           }
         }, 30);
         
@@ -142,15 +148,6 @@ function animateStats() {
   }, observerOptions);
   
   statElements.forEach(element => {
-    const span = element.querySelector('span');
-    if (span) {
-      // Armazene o HTML do span
-      const spanHTML = span.outerHTML;
-      // Remova o span do elemento, mas mantenha o texto
-      element.innerHTML = '0';
-      // Adicione o span de volta
-      element.innerHTML += spanHTML;
-    }
     statsObserver.observe(element);
   });
 }
