@@ -14,8 +14,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Formatando o menu de Navegação */
 .navbar {
-  background-color: rgba(255,255,255,0.9) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -24,8 +25,8 @@
 
 .navbar-scrolled {
   padding: 0.5rem 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  background-color: rgba(255,255,255,0.95) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .nav-item {
@@ -56,7 +57,7 @@
 }
 
 .navbar .nav-item .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -80,16 +81,10 @@
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-/* Zoom Card */
-
-.zoom-card:hover {
-  transition: transform 0.7s;
-  transform: scale(1.1);
-}
-
+/* Formatando footer */
 footer {
   position: relative;
   overflow: hidden;
@@ -97,13 +92,13 @@ footer {
 }
 
 footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 30%;
   height: 100%;
-  background: url('../assets/img/footer-pattern.svg');
+  background: url("../assets/img/footer-pattern.svg");
   background-size: cover;
   opacity: 0.03;
   pointer-events: none;
@@ -121,7 +116,7 @@ footer h5 {
 }
 
 footer h5::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -167,6 +162,8 @@ footer .list-inline-item:not(:last-child) {
   opacity: 1;
 }
 
+/* Formatação seção serviços */
+
 .servicos {
   padding: 50px 0;
   margin-bottom: 100px;
@@ -211,7 +208,7 @@ footer .list-inline-item:not(:last-child) {
 /* Banner de introdução dos serviços */
 .servicos-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('../assets/img/tecnologia-e-agricultura-servicos.jpg');
+    url("../assets/img/tecnologia-e-agricultura-servicos.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -248,14 +245,26 @@ footer .list-inline-item:not(:last-child) {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Aplicar classes com delay em diferentes elementos */
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
 
 /* Ajustes para mobile */
 @media (max-width: 768px) {
@@ -263,23 +272,23 @@ footer .list-inline-item:not(:last-child) {
     font-size: 1.8rem;
     margin-top: 80px;
   }
-  
+
   .servicos img {
     width: 100%;
   }
-  
+
   .servicos .service-card {
     margin-bottom: 20px;
   }
-  
+
   .servicos-banner {
     padding: 100px 15px 60px;
   }
-  
+
   .servicos-banner h1 {
     font-size: 1.8rem;
   }
-  
+
   .servicos-banner p {
     font-size: 1rem;
   }
@@ -339,7 +348,7 @@ footer .list-inline-item:not(:last-child) {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/img/tech-agriculture.jpg');
+  background-image: url("../assets/img/tech-agriculture.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -350,11 +359,11 @@ footer .list-inline-item:not(:last-child) {
     height: 80vh;
     min-height: 500px;
   }
-  
+
   .hero-content .display-4 {
     font-size: 2rem;
   }
-  
+
   .hero-content .lead {
     font-size: 1rem;
   }
@@ -375,16 +384,14 @@ footer .list-inline-item:not(:last-child) {
   white-space: nowrap;
   margin: 0 auto;
   border-right: 3px solid #fff;
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   display: inline-block;
   min-height: 60px; /* Altura mínima para evitar saltos de layout */
   position: relative;
 }
 
 #typewriter::after {
-  content: '|';
+  content: "|";
   position: absolute;
   right: -8px;
   animation: blink 0.7s infinite;
@@ -399,19 +406,33 @@ footer .list-inline-item:not(:last-child) {
 
 /* Animação para digitar o texto */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* Animação para o cursor piscando */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #fff }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Complemento para o efeito typewriter */
@@ -450,6 +471,7 @@ footer .list-inline-item:not(:last-child) {
 }
 
 /* Animações para os cards de features */
+
 .feature-card-wrapper {
   opacity: 0;
   transform: translateY(20px);
@@ -489,13 +511,17 @@ footer .list-inline-item:not(:last-child) {
 }
 
 .feature-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 0;
-  background: linear-gradient(180deg, rgba(var(--bs-primary-rgb), 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(var(--bs-primary-rgb), 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transition: height 0.3s ease;
   z-index: -1;
 }
@@ -565,13 +591,13 @@ footer .list-inline-item:not(:last-child) {
     padding: 1.5rem 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .feature-icon {
     width: 70px;
     height: 70px;
     font-size: 1.8rem;
   }
-  
+
   .feature-card h3 {
     font-size: 1.2rem;
   }
@@ -610,7 +636,7 @@ footer .list-inline-item:not(:last-child) {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .tech-image {
@@ -657,16 +683,16 @@ footer .list-inline-item:not(:last-child) {
     margin: 0 0.25rem;
     font-size: 0.9rem;
   }
-  
+
   .tech-tabs .nav-pills {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .tech-benefits li {
     font-size: 1rem;
   }
-  
+
   .tech-image-container {
     margin-bottom: 2rem;
   }
@@ -674,8 +700,11 @@ footer .list-inline-item:not(:last-child) {
 
 /* Estilo para a seção de estatísticas */
 .stats-section {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-              url('../assets/img/farm-background.jpg');
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../assets/img/farm-background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -709,7 +738,7 @@ footer .list-inline-item:not(:last-child) {
   color: var(--primary-color);
   line-height: 1;
   margin-bottom: 0.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .stat-value span {
@@ -735,11 +764,11 @@ footer .list-inline-item:not(:last-child) {
   .stat-card {
     margin-bottom: 1rem;
   }
-  
+
   .stat-value {
     font-size: 2.5rem;
   }
-  
+
   .stat-icon {
     font-size: 2rem;
   }
@@ -754,7 +783,7 @@ footer .list-inline-item:not(:last-child) {
 }
 
 .testimonial-section::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 300px;
   height: 300px;
@@ -766,7 +795,7 @@ footer .list-inline-item:not(:last-child) {
 }
 
 .testimonial-section::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 200px;
   height: 200px;
@@ -857,11 +886,11 @@ footer .list-inline-item:not(:last-child) {
     width: 80px;
     height: 80px;
   }
-  
+
   .testimonial-text {
     font-size: 1rem;
   }
-  
+
   .testimonial-card {
     padding: 1.5rem;
   }
@@ -875,7 +904,7 @@ footer .list-inline-item:not(:last-child) {
 }
 
 .cta-card {
-  background: linear-gradient(135deg, #2c7744 0%, #4CAF50 100%);
+  background: linear-gradient(135deg, #2c7744 0%, #4caf50 100%);
   border-radius: 15px;
   padding: 3.5rem;
   position: relative;
@@ -937,9 +966,15 @@ footer .list-inline-item:not(:last-child) {
 }
 
 @keyframes float {
-  0% { transform: translateY(-20px); }
-  50% { transform: translateY(-30px); }
-  100% { transform: translateY(-20px); }
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 @media (max-width: 992px) {
@@ -952,7 +987,7 @@ footer .list-inline-item:not(:last-child) {
   .cta-card {
     padding: 2rem;
   }
-  
+
   .cta-section {
     padding: 4rem 0;
   }
@@ -1001,21 +1036,21 @@ footer .list-inline-item:not(:last-child) {
     background-color: white;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-top: 0.5rem;
     transition: all 0.3s ease;
     max-height: 0;
     overflow: hidden;
   }
-  
+
   .navbar-collapse.show {
     max-height: 300px;
   }
-  
+
   .navbar-nav {
     padding: 0.5rem 0;
   }
-  
+
   .navbar-nav .nav-item {
     margin: 0.5rem 0;
   }
