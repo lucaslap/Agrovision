@@ -1,554 +1,830 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroVision - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/img/logo.svg" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AgroVision - Home</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/img/logo.svg" />
-</head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img src="assets/img/logo.svg" alt="Logo AgroVision" width="130" />
+          </a>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a href="index.html" class="navbar-brand">
-          <img src="assets/img/logo.svg" alt="Logo AgroVision" width="130" />
-        </a>
-
-        <!-- Botão de hamburger para dispositivos móveis -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav-principal">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="sobre.html" class="nav-link">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-              <a href="servicos.html" class="nav-link">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a href="contato.html" class="nav-link">Fale Conosco</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <!-- Hero Section com Vídeo de Background -->
-    <section class="hero-video-section">
-      <div class="video-background">
-        <video autoplay muted loop playsinline>
-          <source src="assets/Videos/bannervideo.mp4" type="video/mp4">
-          <!-- Fallback caso o navegador não suporte vídeo -->
-          <div class="fallback-bg"></div>
-        </video>
-        <div class="overlay"></div>
-      </div>
-      <div class="hero-content">
-        <div class="container text-center">
-          <div class="typewriter-container">
-            <h1 class="display-4 fw-bold text-white">
-              <span id="typewriter"></span>
-            </h1>
-          </div>
-          <p class="lead my-4 text-white">Soluções inteligentes para monitoramento, análise e otimização do seu agronegócio</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-            <a href="servicos.html" class="btn btn-primary btn-lg px-4">Conheça nossos serviços</a>
-            <a href="contato.html" class="btn btn-outline-light btn-lg px-4">Fale conosco</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section py-5">
-      <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="fw-bold">Nossos Diferenciais</h2>
-          <div class="section-divider"></div>
-          <p class="lead text-muted">Tecnologias que transformam a agricultura convencional em agronegócio de precisão</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-4 feature-card-wrapper">
-            <div class="feature-card h-100">
-              <div class="feature-icon-wrapper">
-                <div class="feature-icon bg-primary bg-gradient text-white">
-                  <i class="bi bi-camera"></i>
-                </div>
-              </div>
-              <h3>Monitoramento por Satélite</h3>
-              <p>Acompanhe suas plantações em tempo real com imagens de alta resolução e detecção precoce de problemas.</p>
-              <ul class="feature-benefits">
-                <li><i class="bi bi-check-circle-fill"></i> Análise de vegetação NDVI</li>
-                <li><i class="bi bi-check-circle-fill"></i> Detecção precoce de pragas</li>
-                <li><i class="bi bi-check-circle-fill"></i> Medição precisa de áreas</li>
-              </ul>
-              <div class="text-center mt-3">
-                <a href="servicos.html" class="btn btn-sm btn-outline-primary">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 feature-card-wrapper">
-            <div class="feature-card h-100">
-              <div class="feature-icon-wrapper">
-                <div class="feature-icon bg-success bg-gradient text-white">
-                  <i class="bi bi-graph-up"></i>
-                </div>
-              </div>
-              <h3>Análise de Dados Agrícolas</h3>
-              <p>Transformamos dados em insights acionáveis para otimizar sua produção e reduzir custos operacionais.</p>
-              <ul class="feature-benefits">
-                <li><i class="bi bi-check-circle-fill"></i> Dashboards intuitivos</li>
-                <li><i class="bi bi-check-circle-fill"></i> Recomendações personalizadas</li>
-                <li><i class="bi bi-check-circle-fill"></i> Histórico completo de safras</li>
-              </ul>
-              <div class="text-center mt-3">
-                <a href="servicos.html" class="btn btn-sm btn-outline-primary">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 feature-card-wrapper">
-            <div class="feature-card h-100">
-              <div class="feature-icon-wrapper">
-                <div class="feature-icon bg-warning bg-gradient text-white">
-                  <i class="bi bi-cloud"></i>
-                </div>
-              </div>
-              <h3>Previsão Meteorológica</h3>
-              <p>Previsões meteorológicas precisas e personalizadas para sua região, ajudando no planejamento das operações agrícolas.</p>
-              <ul class="feature-benefits">
-                <li><i class="bi bi-check-circle-fill"></i> Alertas de eventos críticos</li>
-                <li><i class="bi bi-check-circle-fill"></i> Dados históricos comparativos</li>
-                <li><i class="bi bi-check-circle-fill"></i> Integração com calendário de manejo</li>
-              </ul>
-              <div class="text-center mt-3">
-                <a href="servicos.html" class="btn btn-sm btn-outline-primary">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tecnologias Section -->
-    <section class="tech-section py-5">
-      <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="fw-bold">Tecnologias de Ponta</h2>
-          <div class="section-divider"></div>
-          <p class="lead text-muted">Combinamos as tecnologias mais avançadas para revolucionar o agronegócio</p>
-        </div>
-
-        <div class="tech-tabs">
-          <ul class="nav nav-pills mb-4 justify-content-center" id="techTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="ia-tab" data-bs-toggle="pill" data-bs-target="#ia-content" type="button">
-                <i class="bi bi-cpu"></i> Inteligência Artificial
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="remote-tab" data-bs-toggle="pill" data-bs-target="#remote-content" type="button">
-                <i class="bi bi-globe"></i> Sensoriamento Remoto
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="iot-tab" data-bs-toggle="pill" data-bs-target="#iot-content" type="button">
-                <i class="bi bi-wifi"></i> Internet das Coisas
-              </button>
-            </li>
-          </ul>
-
-          <div class="tab-content" id="techTabsContent">
-            <!-- IA Tab -->
-            <div class="tab-pane fade show active" id="ia-content">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                  <div class="tech-image-container">
-                    <img src="assets/img/tech-agriculture.jpg" alt="Inteligência Artificial na Agricultura" class="img-fluid rounded shadow tech-image">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <h3 class="mb-4">Inteligência Artificial</h3>
-                  <p class="lead">Algoritmos avançados que analisam padrões de crescimento, condições do solo e previsões climáticas para otimizar a produção.</p>
-                  <ul class="tech-benefits">
-                    <li><i class="bi bi-check-circle text-success"></i> Detecção precoce de doenças e pragas</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Recomendações personalizadas para cada área da lavoura</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Modelos preditivos para estimativa de colheita</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Otimização de insumos baseada em dados históricos</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sensoriamento Remoto Tab -->
-            <div class="tab-pane fade" id="remote-content">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                  <div class="tech-image-container">
-                    <img src="assets/img/tech-agriculture.jpg" alt="Sensoriamento Remoto" class="img-fluid rounded shadow tech-image">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <h3 class="mb-4">Sensoriamento Remoto</h3>
-                  <p class="lead">Imagens de satélite e drones para monitoramento em tempo real do desenvolvimento das plantações.</p>
-                  <ul class="tech-benefits">
-                    <li><i class="bi bi-check-circle text-success"></i> Mapeamento detalhado da propriedade</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Identificação de áreas com stress hídrico</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Análise de índices de vegetação (NDVI, EVI)</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Monitoramento da evolução da lavoura ao longo do tempo</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- IoT Tab -->
-            <div class="tab-pane fade" id="iot-content">
-              <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                  <div class="tech-image-container">
-                    <img src="assets/img/tech-agriculture.jpg" alt="Internet das Coisas na Agricultura" class="img-fluid rounded shadow tech-image">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <h3 class="mb-4">Internet das Coisas (IoT)</h3>
-                  <p class="lead">Sensores conectados que fornecem dados em tempo real sobre umidade do solo, temperatura e outros fatores críticos.</p>
-                  <ul class="tech-benefits">
-                    <li><i class="bi bi-check-circle text-success"></i> Monitoramento 24/7 de parâmetros críticos</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Economia de água através de irrigação inteligente</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Alertas em tempo real de condições adversas</li>
-                    <li><i class="bi bi-check-circle text-success"></i> Integração com sistemas automatizados de irrigação e pulverização</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Estatísticas Section -->
-    <section class="stats-section py-5">
-      <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="fw-bold">Resultados Comprovados</h2>
-          <div class="section-divider"></div>
-          <p class="lead text-muted">Impacto real das nossas soluções tecnológicas no campo</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-3">
-            <div class="stat-card h-100">
-              <div class="stat-icon">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <div class="stat-value" data-count="30">0<span>%</span></div>
-              <div class="stat-label">Aumento médio na produtividade</div>
-              <div class="stat-bar" style="width: 30%"></div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="stat-card h-100">
-              <div class="stat-icon">
-                <i class="bi bi-droplet"></i>
-              </div>
-              <div class="stat-value" data-count="25">0<span>%</span></div>
-              <div class="stat-label">Redução no uso de recursos hídricos</div>
-              <div class="stat-bar" style="width: 25%"></div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="stat-card h-100">
-              <div class="stat-icon">
-                <i class="bi bi-bug"></i>
-              </div>
-              <div class="stat-value" data-count="45">0<span>%</span></div>
-              <div class="stat-label">Diminuição de perdas por pragas</div>
-              <div class="stat-bar" style="width: 45%"></div>
-            </div>
-          </div>
-
-
-          <div class="col-md-3">
-            <div class="stat-card h-100">
-              <div class="stat-icon">
-                <i class="bi bi-currency-dollar"></i>
-              </div>
-              <div class="stat-value" data-count="40">0<span>%</span></div>
-              <div class="stat-label">Redução média nos custos operacionais</div>
-              <div class="stat-bar" style="width: 40%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section py-5">
-      <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="fw-bold">O que nossos clientes dizem</h2>
-          <div class="section-divider"></div>
-          <p class="lead text-muted">Histórias de sucesso de quem já transformou seu agronegócio</p>
-        </div>
-
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Primeiro depoimento -->
-            <div class="carousel-item active">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="testimonial-card">
-                    <div class="testimonial-image">
-                      <img src="assets/img/foto1.png" alt="João Silva" class="rounded-circle">
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-quote">
-                        <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                      </div>
-                      <p class="testimonial-text">
-                        "A AgroVision transformou completamente nossa operação. Conseguimos aumentar nossa produtividade
-                        em 30% no primeiro ano de implementação das soluções de monitoramento. O retorno sobre o
-                        investimento superou todas as expectativas."
-                      </p>
-                      <div class="testimonial-author">
-                        <h5 class="fw-bold mb-0">João Silva</h5>
-                        <p class="text-muted mb-0">Fazenda Esperança, Minas Gerais</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Segundo depoimento -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="testimonial-card">
-                    <div class="testimonial-image">
-                      <img src="assets/img/tech-agriculture.jpg" alt="Ana Costa" class="rounded-circle">
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-quote">
-                        <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                      </div>
-                      <p class="testimonial-text">
-                        "O sistema de detecção precoce de pragas da AgroVision nos salvou de uma perda quase certa da
-                        nossa plantação de soja. Identificamos o problema três semanas antes do que seria possível com
-                        métodos tradicionais e economizamos milhares de reais."
-                      </p>
-                      <div class="testimonial-author">
-                        <h5 class="fw-bold mb-0">Ana Costa</h5>
-                        <p class="text-muted mb-0">Grupo Agrícola Horizonte, Mato Grosso</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Terceiro depoimento -->
-            <div class="carousel-item">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <div class="testimonial-card">
-                    <div class="testimonial-image">
-                      <img src="assets/img/tech-agriculture.jpg" alt="Carlos Mendes" class="rounded-circle">
-                    </div>
-                    <div class="testimonial-content">
-                      <div class="testimonial-quote">
-                        <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                      </div>
-                      <p class="testimonial-text">
-                        "A irrigação inteligente da AgroVision reduziu nosso consumo de água em 25% e, simultaneamente,
-                        melhorou a qualidade dos nossos produtos. A equipe de suporte é extremamente competente e sempre
-                        disponível quando precisamos."
-                      </p>
-                      <div class="testimonial-author">
-                        <h5 class="fw-bold mb-0">Carlos Mendes</h5>
-                        <p class="text-muted mb-0">Fazenda Vale Verde, São Paulo</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon testimonial-control" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon testimonial-control" aria-hidden="true"></span>
-            <span class="visually-hidden">Próximo</span>
+          <!-- Botão de hamburger para dispositivos móveis -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav-principal"
+            aria-controls="nav-principal"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="carousel-indicators testimonial-indicators">
-            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Depoimento 1"></button>
-            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Depoimento 2"></button>
-            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Depoimento 3"></button>
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active" aria-current="page"
+                  ><i class="bi bi-house-door-fill me-1"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="sobre.html" class="nav-link">Sobre Nós</a>
+              </li>
+              <li class="nav-item">
+                <a href="servicos.html" class="nav-link">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a href="contato.html" class="nav-link"
+                  ><i class="bi bi-chat-dots me-1"></i>Fale Conosco</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section com Vídeo de Background -->
+      <section class="hero-video-section">
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="assets/Videos/bannervideo.mp4" type="video/mp4" />
+            <!-- Fallback caso o navegador não suporte vídeo -->
+            <div class="fallback-bg"></div>
+          </video>
+          <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+          <div class="container text-center">
+            <div class="typewriter-container">
+              <h1 class="display-4 fw-bold text-white">
+                <span id="typewriter"></span>
+              </h1>
+            </div>
+            <p class="lead my-4 text-white">
+              Soluções inteligentes para monitoramento, análise e otimização do
+              seu agronegócio
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <a href="servicos.html" class="btn btn-primary btn-lg px-4"
+                >Conheça nossos serviços</a
+              >
+              <a href="contato.html" class="btn btn-outline-light btn-lg px-4"
+                >Fale conosco</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="cta-card">
-              <div class="cta-bg-pattern"></div>
-              <div class="row align-items-center">
-                <div class="col-lg-7 mb-4 mb-lg-0">
-                  <h2 class="fw-bold display-5 text-white mb-3"> Pronto para revolucionar seu agronegócio?</h2>
-                  <p class="lead text-white mb-4"> Entre em contato hoje mesmo para uma demonstração gratuita das nossas soluções e descubra como a tecnologia pode transformar 
-                    sua produtividade.</p>
-                  <div class="d-flex gap-3 flex-column flex-sm-row">
-                    <a href="contato.html" class="btn btn-light btn-lg px-4 fw-semibold">
-                      <i class="bi bi-calendar-check me-2"></i>Agende uma demonstração
-                    </a>
-                    <a href="tel:+551134567890" class="btn btn-outline-light btn-lg px-4">
-                      <i class="bi bi-telephone me-2"></i>Fale conosco
-                    </a>
-                  </div>
-                  <div class="mt-4 text-white-50">
-                    <small><i class="bi bi-shield-check"></i> Sem compromisso • Atendimento personalizado • Suporte técnico especializado</small>
+      <!-- Features Section -->
+      <section class="features-section py-5">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h2 class="fw-bold">Nossos Diferenciais</h2>
+            <div class="section-divider"></div>
+            <p class="lead text-muted">
+              Tecnologias que transformam a agricultura convencional em
+              agronegócio de precisão
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4 feature-card-wrapper">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-primary bg-gradient text-white">
+                    <i class="bi bi-camera"></i>
                   </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                  <img src="assets/img/tech-agriculture.jpg" alt="Tecnologia no Campo" class="img-fluid rounded shadow cta-image">
+                <h3>Monitoramento por Satélite</h3>
+                <p>
+                  Acompanhe suas plantações em tempo real com imagens de alta
+                  resolução e detecção precoce de problemas.
+                </p>
+                <ul class="feature-benefits">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Análise de vegetação
+                    NDVI
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Detecção precoce de
+                    pragas
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Medição precisa de
+                    áreas
+                  </li>
+                </ul>
+                <div class="text-center mt-3">
+                  <a href="servicos.html" class="btn btn-sm btn-outline-primary"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 feature-card-wrapper">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-success bg-gradient text-white">
+                    <i class="bi bi-graph-up"></i>
+                  </div>
+                </div>
+                <h3>Análise de Dados Agrícolas</h3>
+                <p>
+                  Transformamos dados em insights acionáveis para otimizar sua
+                  produção e reduzir custos operacionais.
+                </p>
+                <ul class="feature-benefits">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Dashboards
+                    intuitivos
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Recomendações
+                    personalizadas
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Histórico completo
+                    de safras
+                  </li>
+                </ul>
+                <div class="text-center mt-3">
+                  <a href="servicos.html" class="btn btn-sm btn-outline-primary"
+                    >Saiba mais</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 feature-card-wrapper">
+              <div class="feature-card h-100">
+                <div class="feature-icon-wrapper">
+                  <div class="feature-icon bg-warning bg-gradient text-white">
+                    <i class="bi bi-cloud"></i>
+                  </div>
+                </div>
+                <h3>Previsão Meteorológica</h3>
+                <p>
+                  Previsões meteorológicas precisas e personalizadas para sua
+                  região, ajudando no planejamento das operações agrícolas.
+                </p>
+                <ul class="feature-benefits">
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Alertas de eventos
+                    críticos
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Dados históricos
+                    comparativos
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i> Integração com
+                    calendário de manejo
+                  </li>
+                </ul>
+                <div class="text-center mt-3">
+                  <a href="servicos.html" class="btn btn-sm btn-outline-primary"
+                    >Saiba mais</a
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container">
-      <div class="row">
-        <!-- Logo e informações da empresa -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <img
+      </section>
+
+      <!-- Tecnologias Section -->
+      <section class="tech-section py-5">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h2 class="fw-bold">Tecnologias de Ponta</h2>
+            <div class="section-divider"></div>
+            <p class="lead text-muted">
+              Combinamos as tecnologias mais avançadas para revolucionar o
+              agronegócio
+            </p>
+          </div>
+
+          <div class="tech-tabs">
+            <ul
+              class="nav nav-pills mb-4 justify-content-center"
+              id="techTabs"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="ia-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#ia-content"
+                  type="button"
+                >
+                  <i class="bi bi-cpu"></i> Inteligência Artificial
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="remote-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#remote-content"
+                  type="button"
+                >
+                  <i class="bi bi-globe"></i> Sensoriamento Remoto
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="iot-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#iot-content"
+                  type="button"
+                >
+                  <i class="bi bi-wifi"></i> Internet das Coisas
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="techTabsContent">
+              <!-- IA Tab -->
+              <div class="tab-pane fade show active" id="ia-content">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="tech-image-container">
+                      <img
+                        src="assets/img/tech-agriculture.jpg"
+                        alt="Inteligência Artificial na Agricultura"
+                        class="img-fluid rounded shadow tech-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h3 class="mb-4">Inteligência Artificial</h3>
+                    <p class="lead">
+                      Algoritmos avançados que analisam padrões de crescimento,
+                      condições do solo e previsões climáticas para otimizar a
+                      produção.
+                    </p>
+                    <ul class="tech-benefits">
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i> Detecção
+                        precoce de doenças e pragas
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Recomendações personalizadas para cada área da lavoura
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i> Modelos
+                        preditivos para estimativa de colheita
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Otimização de insumos baseada em dados históricos
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sensoriamento Remoto Tab -->
+              <div class="tab-pane fade" id="remote-content">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="tech-image-container">
+                      <img
+                        src="assets/img/tech-agriculture.jpg"
+                        alt="Sensoriamento Remoto"
+                        class="img-fluid rounded shadow tech-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h3 class="mb-4">Sensoriamento Remoto</h3>
+                    <p class="lead">
+                      Imagens de satélite e drones para monitoramento em tempo
+                      real do desenvolvimento das plantações.
+                    </p>
+                    <ul class="tech-benefits">
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Mapeamento detalhado da propriedade
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Identificação de áreas com stress hídrico
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i> Análise
+                        de índices de vegetação (NDVI, EVI)
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Monitoramento da evolução da lavoura ao longo do tempo
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- IoT Tab -->
+              <div class="tab-pane fade" id="iot-content">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="tech-image-container">
+                      <img
+                        src="assets/img/tech-agriculture.jpg"
+                        alt="Internet das Coisas na Agricultura"
+                        class="img-fluid rounded shadow tech-image"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h3 class="mb-4">Internet das Coisas (IoT)</h3>
+                    <p class="lead">
+                      Sensores conectados que fornecem dados em tempo real sobre
+                      umidade do solo, temperatura e outros fatores críticos.
+                    </p>
+                    <ul class="tech-benefits">
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Monitoramento 24/7 de parâmetros críticos
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i> Economia
+                        de água através de irrigação inteligente
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i> Alertas
+                        em tempo real de condições adversas
+                      </li>
+                      <li>
+                        <i class="bi bi-check-circle text-success"></i>
+                        Integração com sistemas automatizados de irrigação e
+                        pulverização
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estatísticas Section -->
+      <section class="stats-section py-5">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h2 class="fw-bold">Resultados Comprovados</h2>
+            <div class="section-divider"></div>
+            <p class="lead text-muted">
+              Impacto real das nossas soluções tecnológicas no campo
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="stat-card h-100">
+                <div class="stat-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="stat-value" data-count="30">0<span>%</span></div>
+                <div class="stat-label">Aumento médio na produtividade</div>
+                <div class="stat-bar" style="width: 30%"></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="stat-card h-100">
+                <div class="stat-icon">
+                  <i class="bi bi-droplet"></i>
+                </div>
+                <div class="stat-value" data-count="25">0<span>%</span></div>
+                <div class="stat-label">
+                  Redução no uso de recursos hídricos
+                </div>
+                <div class="stat-bar" style="width: 25%"></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="stat-card h-100">
+                <div class="stat-icon">
+                  <i class="bi bi-bug"></i>
+                </div>
+                <div class="stat-value" data-count="45">0<span>%</span></div>
+                <div class="stat-label">Diminuição de perdas por pragas</div>
+                <div class="stat-bar" style="width: 45%"></div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="stat-card h-100">
+                <div class="stat-icon">
+                  <i class="bi bi-currency-dollar"></i>
+                </div>
+                <div class="stat-value" data-count="40">0<span>%</span></div>
+                <div class="stat-label">
+                  Redução média nos custos operacionais
+                </div>
+                <div class="stat-bar" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="testimonial-section py-5">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h2 class="fw-bold">O que nossos clientes dizem</h2>
+            <div class="section-divider"></div>
+            <p class="lead text-muted">
+              Histórias de sucesso de quem já transformou seu agronegócio
+            </p>
+          </div>
+
+          <div
+            id="testimonialCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Primeiro depoimento -->
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="testimonial-card">
+                      <div class="testimonial-image">
+                        <img
+                          src="assets/img/foto1.png"
+                          alt="João Silva"
+                          class="rounded-circle"
+                        />
+                      </div>
+                      <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                          <i
+                            class="bi bi-quote fs-2 text-primary opacity-50"
+                          ></i>
+                        </div>
+                        <p class="testimonial-text">
+                          "A AgroVision transformou completamente nossa
+                          operação. Conseguimos aumentar nossa produtividade em
+                          30% no primeiro ano de implementação das soluções de
+                          monitoramento. O retorno sobre o investimento superou
+                          todas as expectativas."
+                        </p>
+                        <div class="testimonial-author">
+                          <h5 class="fw-bold mb-0">João Silva</h5>
+                          <p class="text-muted mb-0">
+                            Fazenda Esperança, Minas Gerais
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Segundo depoimento -->
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="testimonial-card">
+                      <div class="testimonial-image">
+                        <img
+                          src="assets/img/foto2.png"
+                          alt="Ana Costa"
+                          class="rounded-circle"
+                        />
+                      </div>
+                      <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                          <i
+                            class="bi bi-quote fs-2 text-primary opacity-50"
+                          ></i>
+                        </div>
+                        <p class="testimonial-text">
+                          "O sistema de detecção precoce de pragas da AgroVision
+                          nos salvou de uma perda quase certa da nossa plantação
+                          de soja. Identificamos o problema três semanas antes
+                          do que seria possível com métodos tradicionais e
+                          economizamos milhares de reais."
+                        </p>
+                        <div class="testimonial-author">
+                          <h5 class="fw-bold mb-0">Ana Costa</h5>
+                          <p class="text-muted mb-0">
+                            Grupo Agrícola Horizonte, Mato Grosso
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terceiro depoimento -->
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <div class="testimonial-card">
+                      <div class="testimonial-image">
+                        <img
+                          src="assets/img/foto3.png"
+                          alt="Carlos Mendes"
+                          class="rounded-circle"
+                        />
+                      </div>
+                      <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                          <i
+                            class="bi bi-quote fs-2 text-primary opacity-50"
+                          ></i>
+                        </div>
+                        <p class="testimonial-text">
+                          "A irrigação inteligente da AgroVision reduziu nosso
+                          consumo de água em 25% e, simultaneamente, melhorou a
+                          qualidade dos nossos produtos. A equipe de suporte é
+                          extremamente competente e sempre disponível quando
+                          precisamos."
+                        </p>
+                        <div class="testimonial-author">
+                          <h5 class="fw-bold mb-0">Carlos Mendes</h5>
+                          <p class="text-muted mb-0">
+                            Fazenda Vale Verde, São Paulo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon testimonial-control"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon testimonial-control"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+
+            <div class="carousel-indicators testimonial-indicators">
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Depoimento 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="1"
+                aria-label="Depoimento 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#testimonialCarousel"
+                data-bs-slide-to="2"
+                aria-label="Depoimento 3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="cta-card">
+                <div class="cta-bg-pattern"></div>
+                <div class="row align-items-center">
+                  <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="fw-bold display-5 text-white mb-3">
+                      Pronto para revolucionar seu agronegócio?
+                    </h2>
+                    <p class="lead text-white mb-4">
+                      Entre em contato hoje mesmo para uma demonstração gratuita
+                      das nossas soluções e descubra como a tecnologia pode
+                      transformar sua produtividade.
+                    </p>
+                    <div class="d-flex gap-3 flex-column flex-sm-row">
+                      <a
+                        href="contato.html"
+                        class="btn btn-light btn-lg px-4 fw-semibold"
+                      >
+                        <i class="bi bi-calendar-check me-2"></i>Agende uma
+                        demonstração
+                      </a>
+                      <a
+                        href="tel:+551134567890"
+                        class="btn btn-outline-light btn-lg px-4"
+                      >
+                        <i class="bi bi-telephone me-2"></i>Fale conosco
+                      </a>
+                    </div>
+                    <div class="mt-4 text-white-50">
+                      <small
+                        ><i class="bi bi-shield-check"></i> Sem compromisso •
+                        Atendimento personalizado • Suporte técnico
+                        especializado</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-lg-5 d-none d-lg-block">
+                    <img
+                      src="assets/img/tech-agriculture.jpg"
+                      alt="Tecnologia no Campo"
+                      class="img-fluid rounded shadow cta-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <!-- Logo e informações da empresa -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <img
               src="assets/img/LogoFooter.svg"
               alt="Logo AgroVision"
               width="130"
               class="mb-3"
             />
-          <p class="small">
-            Soluções tecnológicas inovadoras para o agronegócio, auxiliando
-            produtores a maximizar resultados de forma sustentável.
-          </p>
-          <p class="small">Redes Sociais</p>
-          <div class="mt-3 social-icons">
-            <a href="#" class="social-icon me-3"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon me-3"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon me-3"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            <p class="small">
+              Soluções tecnológicas inovadoras para o agronegócio, auxiliando
+              produtores a maximizar resultados de forma sustentável.
+            </p>
+            <p class="small">Redes Sociais</p>
+            <div class="mt-3 social-icons">
+              <a href="#" class="social-icon me-3"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="social-icon me-3"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="social-icon me-3"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Links rápidos -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Links Rápidos</h5>
+            <ul class="list-unstyled footer-links">
+              <li class="mb-2">
+                <a href="index.html" class="text-white text-decoration-none">
+                  <i class="bi bi-chevron-right small me-2"></i>Home
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="sobre.html" class="text-white text-decoration-none">
+                  <i class="bi bi-chevron-right small me-2"></i>Sobre Nós
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="servicos.html" class="text-white text-decoration-none">
+                  <i class="bi bi-chevron-right small me-2"></i>Serviços
+                </a>
+              </li>
+              <li class="mb-2">
+                <a href="contato.html" class="text-white text-decoration-none">
+                  <i class="bi bi-chevron-right small me-2"></i>Fale Conosco
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contato -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contato</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-geo-alt me-2"></i> Av. Tecnologia, 1500<br />
+                <span class="ms-4">São Paulo, SP - 04523-001</span>
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone me-2"></i> (11) 3456-7890
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i> contato@agrovision.com.br
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Newsletter</h5>
+            <p class="small">
+              Receba novidades e atualizações sobre tecnologias agrícolas
+            </p>
+            <form id="newsletter-form">
+              <div class="input-group mb-2">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Seu e-mail"
+                  aria-label="E-mail"
+                  required
+                />
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  id="newsletter-button"
+                >
+                  Assinar
+                </button>
+              </div>
+              <small
+                id="newsletter-feedback"
+                class="form-text text-light d-none"
+                >E-mail cadastrado com sucesso!</small
+              >
+            </form>
           </div>
         </div>
 
-        <!-- Links rápidos -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Links Rápidos</h5>
-          <ul class="list-unstyled footer-links">
-            <li class="mb-2">
-              <a href="index.html" class="text-white text-decoration-none">
-                <i class="bi bi-chevron-right small me-2"></i>Home
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="sobre.html" class="text-white text-decoration-none">
-                <i class="bi bi-chevron-right small me-2"></i>Sobre Nós
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="servicos.html" class="text-white text-decoration-none">
-                <i class="bi bi-chevron-right small me-2"></i>Serviços
-              </a>
-            </li>
-            <li class="mb-2">
-              <a href="contato.html" class="text-white text-decoration-none">
-                <i class="bi bi-chevron-right small me-2"></i>Fale Conosco
-              </a>
-            </li>
-          </ul>
-        </div>
+        <!-- Separador -->
+        <hr class="my-4" />
 
-        <!-- Contato -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Contato</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2">
-              <i class="bi bi-geo-alt me-2"></i> Av. Tecnologia, 1500<br />
-              <span class="ms-4">São Paulo, SP - 04523-001</span>
-            </li>
-            <li class="mb-2">
-              <i class="bi bi-telephone me-2"></i> (11) 3456-7890
-            </li>
-            <li class="mb-2">
-              <i class="bi bi-envelope me-2"></i> contato@agrovision.com.br
-            </li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4">Newsletter</h5>
-          <p class="small">Receba novidades e atualizações sobre tecnologias agrícolas</p>
-          <form id="newsletter-form">
-            <div class="input-group mb-2">
-              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="E-mail" required />
-              <button class="btn btn-primary" type="submit" id="newsletter-button">Assinar</button>
-            </div>
-            <small id="newsletter-feedback" class="form-text text-light d-none">E-mail cadastrado com sucesso!</small>
-          </form>
+        <!-- Copyright e políticas -->
+        <div class="row align-items-center">
+          <div class="col-md-7 text-center text-md-start">
+            <p class="small mb-md-0">
+              &copy; 2025 AgroVision - Todos os direitos reservados
+            </p>
+          </div>
+          <div class="col-md-5">
+            <ul class="list-inline text-center text-md-end mb-0">
+              <li class="list-inline-item">
+                <a href="#" class="text-white small">Política de Privacidade</a>
+              </li>
+              <li class="list-inline-item">|</li>
+              <li class="list-inline-item">
+                <a href="#" class="text-white small">Termos de Uso</a>
+              </li>
+              <li class="list-inline-item ms-3">
+                <a href="#" class="back-to-top"
+                  ><i class="bi bi-arrow-up-circle"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <!-- Separador -->
-      <hr class="my-4" />
-
-      <!-- Copyright e políticas -->
-      <div class="row align-items-center">
-        <div class="col-md-7 text-center text-md-start">
-          <p class="small mb-md-0">&copy; 2025 AgroVision - Todos os direitos reservados</p>
-        </div>
-        <div class="col-md-5">
-          <ul class="list-inline text-center text-md-end mb-0">
-            <li class="list-inline-item">
-              <a href="#" class="text-white small">Política de Privacidade</a>
-            </li>
-            <li class="list-inline-item">|</li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white small">Termos de Uso</a>
-            </li>
-            <li class="list-inline-item ms-3">
-              <a href="#" class="back-to-top"><i class="bi bi-arrow-up-circle"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <script src="js/main.js"></script>
-  </footer>
-</body>
+      <script src="js/main.js"></script>
+    </footer>
+  </body>
 </html>
