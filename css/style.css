@@ -34,7 +34,7 @@
   font-weight: 600;
   color: #fff;
   text-decoration: none;
-  padding: 10px 10px;
+  padding: 5px 5px;
   transition: color 0.3s ease;
 }
 
@@ -52,7 +52,7 @@
   position: relative;
   padding: 0.5rem 1rem;
   margin: 0 0.2rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
@@ -78,10 +78,88 @@
   font-weight: 600;
 }
 
+/* Estilizar o botão hamburguer para mobile */
+.navbar-toggler.custom-toggler {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: rgba(44, 119, 68, 0.1);
+}
+
+.navbar-toggler.custom-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(44, 119, 68, 0.25);
+  outline: none;
+}
+
+.navbar-toggler.custom-toggler i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
   font-family: "Roboto", sans-serif;
+}
+
+/* Estilos para hero section com vídeo */
+.hero-video-section {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  z-index: 1;
+  width: 100%;
+  padding-top: 70px; /* Espaço para a navbar fixa */
+}
+
+/* Fallback quando o vídeo não está disponível */
+.fallback-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/tech-agriculture.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Formatando footer */
@@ -98,7 +176,7 @@ footer::before {
   right: 0;
   width: 30%;
   height: 100%;
-  background: url("../assets/img/footer-pattern.svg");
+  background: url("../assets/img/LogoFooter.svg");
   background-size: cover;
   opacity: 0.03;
   pointer-events: none;
@@ -162,82 +240,6 @@ footer .list-inline-item:not(:last-child) {
   opacity: 1;
 }
 
-/* Formatação seção serviços */
-
-.servicos {
-  padding: 50px 0;
-  margin-bottom: 100px;
-}
-
-/* Estilo para cards de serviços */
-.servicos .service-card {
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-  border-top: 4px solid var(--primary-color);
-}
-
-.servicos .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.servicos .service-card h2 {
-  color: var(--primary-color);
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.servicos h1 {
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  margin-top: 100px;
-}
-
-/* Ícones para serviços */
-.service-icon {
-  font-size: 40px;
-  color: var(--accent-color);
-  margin-bottom: 20px;
-}
-
-/* Banner de introdução dos serviços */
-.servicos-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/img/tecnologia-e-agricultura-servicos.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 120px 20px 80px;
-  margin-bottom: 50px;
-}
-
-.servicos-banner h1 {
-  font-size: 2.5rem;
-  margin-top: 30px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
-}
-
-.servicos-banner p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.servicos hr {
-  width: 60%;
-  margin: 30px auto;
-  border-top: 2px solid var(--secondary-color);
-  opacity: 0.3;
-}
-
 /* Animações para elementos */
 .fade-in {
   opacity: 0;
@@ -255,102 +257,40 @@ footer .list-inline-item:not(:last-child) {
   }
 }
 
-/* Aplicar classes com delay em diferentes elementos */
-.delay-1 {
-  animation-delay: 0.2s;
-}
-.delay-2 {
-  animation-delay: 0.4s;
-}
-.delay-3 {
-  animation-delay: 0.6s;
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-  .servicos h1 {
-    font-size: 1.8rem;
-    margin-top: 80px;
+/* Transição do menu em mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    transition: all 0.1s ease;
   }
 
-  .servicos img {
-    width: 100%;
+  .navbar .nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 0;
   }
 
-  .servicos .service-card {
-    margin-bottom: 20px;
+  .navbar .nav-item:last-child {
+    border-bottom: none;
   }
 
-  .servicos-banner {
-    padding: 100px 15px 60px;
+  .navbar .nav-item .nav-link {
+    padding: 2px;
+    margin: 0;
+    font-weight: 600;
   }
 
-  .servicos-banner h1 {
-    font-size: 1.8rem;
+  .navbar .nav-item .nav-link::after {
+    display: none;
   }
 
-  .servicos-banner p {
-    font-size: 1rem;
+  .navbar .nav-link.active {
+    background-color: rgba(44, 119, 68, 0.1);
+    border-radius: 8px;
   }
-}
-
-/* Estilos para hero section com vídeo */
-.hero-video-section {
-  position: relative;
-  min-height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: white;
-}
-
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.video-background video {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-.video-background .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-  z-index: 1;
-  width: 100%;
-  padding-top: 70px; /* Espaço para a navbar fixa */
-}
-
-/* Fallback quando o vídeo não está disponível */
-.fallback-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/img/tech-agriculture.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 /* Ajustes para dispositivos móveis */
@@ -704,7 +644,7 @@ footer .list-inline-item:not(:last-child) {
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
-    url("../assets/img/farm-background.jpg");
+    url("../assets/img/depoimento1.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -808,7 +748,7 @@ footer .list-inline-item:not(:last-child) {
 
 .testimonial-card {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   position: relative;
@@ -832,6 +772,7 @@ footer .list-inline-item:not(:last-child) {
 }
 
 .testimonial-quote {
+  position: relative;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -1077,3 +1018,162 @@ footer .list-inline-item:not(:last-child) {
     margin: 0.5rem 0;
   }
 }
+
+.hero-about{
+  background-color: #2e8b2e;
+}
+
+/* Estilos para os cards da equipe */
+.team-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Ícones sociais em formato circular */
+.social-icon.circle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(44, 119, 68, 0.1);
+  color: #2c7744;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon.circle-icon:hover {
+  background-color: #2c7744;
+  color: white;
+}
+
+/* Garantir que as imagens de perfil mantenham a proporção correta */
+.object-fit-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .equipe-row .col-md-3 {
+    width: 20%;
+  }
+}
+
+/* Estilos para a página de serviços */
+.service-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-features li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.bg-primary-light {
+  background-color: rgba(44, 119, 68, 0.1);
+}
+
+.bg-success-light {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.bg-warning-light {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Estilos para os cards de planos */
+.plan-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+}
+
+.plan-featured {
+  border: 2px solid #2c7744 !important;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #2c7744;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-bottom-left-radius: 15px;
+}
+
+.plan-price {
+  margin: 1.5rem 0;
+}
+
+.plan-features li {
+  padding: 0.5rem 0;
+}
+
+/* Estilo para o accordion de FAQ */
+.accordion-button {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #2c7744;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-color: #2c7744;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 12px;
+  width: 24px;
+  height: 24px;
+}
+
