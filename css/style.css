@@ -644,7 +644,7 @@ footer .list-inline-item:not(:last-child) {
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
-    url("../assets/img/depoimento1.png");
+    url("../assets/img/logo.svg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
