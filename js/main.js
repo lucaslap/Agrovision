@@ -1,29 +1,42 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Texto a ser digitado
+  
+  // Texto a ser exibido
   const text = "Transforme sua produção agrícola com tecnologia";
   const typewriter = document.getElementById('typewriter');
   
-  // Limpa qualquer texto existente
-  typewriter.textContent = "";
+  // Verifica se é um dispositivo móvel (largura < 768px)
+  const isMobile = window.innerWidth < 768;
   
-  // Velocidade de digitação (em milissegundos)
-  const typingSpeed = 80;
-  
-  // Função para simular digitação
-  let i = 0;
-  function typeText() {
-    if (i < text.length) {
-      typewriter.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeText, typingSpeed);
-    } else {
-      // Remove o cursor quando terminar de digitar
-      typewriter.classList.add('typing-complete');
+  if (isMobile) {
+    // Em dispositivos móveis, renderiza o texto imediatamente sem animação
+    typewriter.textContent = "Transforme sua produção agrícola com tecnologia";
+    typewriter.style.whiteSpace = "normal";
+    typewriter.style.borderRight = "none";
+    typewriter.style.animation = "none";
+    typewriter.classList.add('typing-complete');
+  } else {
+    // Em dispositivos desktop, mantém o efeito typewriter
+    typewriter.textContent = "";
+    
+    // Velocidade de digitação (em milissegundos)
+    const typingSpeed = 80;
+    
+    // Função para simular digitação
+    let i = 0;
+    function typeText() {
+      if (i < text.length) {
+        typewriter.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeText, typingSpeed);
+      } else {
+        // Remove o cursor quando terminar de digitar
+        typewriter.classList.add('typing-complete');
+      }
     }
+    
+    // Pequeno atraso antes de iniciar a digitação
+    setTimeout(typeText, 500);
   }
-  
-  // Pequeno atraso antes de iniciar a digitação
-  setTimeout(typeText, 500);
 
   // Animação para os cards de features
   const featureCards = document.querySelectorAll('.feature-card-wrapper');
