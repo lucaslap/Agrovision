@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     newsletterForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Simulação de envio (substitua por chamada real à API)
+      // Simulação de envio
       newsletterButton.disabled = true;
       newsletterButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
       
