@@ -58,7 +58,10 @@ Contribuições são bem-vindas! Se quiser sugerir melhorias ou corrigir algo, s
 
 ## 📽️ Pitch Vídeo
 
-Um vídeo demonstrando a navegabilidade do site será apresentado como parte da entrega da Fase 3. Nele, mostramos a estrutura do site, layout responsivo e funcionamento básico dos elementos interativos.
+No video mostramos a estrutura do site, layout responsivo e funcionamento básico dos elementos interativos.
+
+📹 [Clique aqui para ver o vídeo de demonstração](https://youtu.be/KHW60BkhiLw )
+
 
 ## 👥 Integrantes do Grupo
 
