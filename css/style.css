@@ -693,7 +693,7 @@ footer .list-inline-item:not(:last-child) {
 
 .stat-bar {
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   border-radius: 2px;
   position: absolute;
   bottom: 0;
@@ -1175,5 +1175,489 @@ footer .list-inline-item:not(:last-child) {
   background-size: 12px;
   width: 24px;
   height: 24px;
+}
+
+/* Melhorias de Usabilidade Gerais */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(44, 119, 68, 0.25);
+}
+
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(44, 119, 68, 0.25);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(44, 119, 68, 0.25);
+}
+
+/* Indicadores visuais melhorados */
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.valid-feedback {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Melhorias no formulário de contato */
+#contadorCaracteres {
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contadorCaracteres.text-danger {
+  color: #dc3545 !important;
+}
+
+#contadorCaracteres.text-warning {
+  color: #ffc107 !important;
+}
+
+/* Loading states para botões */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner-border-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Tooltips customizados */
+.tooltip-inner {
+  background-color: var(--primary-color);
+  font-size: 0.875rem;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--primary-color);
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--primary-color);
+}
+
+/* Melhorias de acessibilidade */
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.form-control:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Indicador de campo obrigatório */
+.form-label::after {
+  content: "";
+}
+
+.form-label:has(+ input[required])::after,
+.form-label:has(+ select[required])::after,
+.form-label:has(+ textarea[required])::after {
+  content: " *";
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Hover effects melhorados */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards com melhor interatividade */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Breadcrumbs para navegação */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--primary-color);
+  content: ">";
+}
+
+.breadcrumb-item.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Progress indicators */
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Alert customizado */
+.alert {
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #cce7ff 0%, #b3d9ff 100%);
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+/* Estilos para a página de serviços */
+.plan-comparator {
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.plan-comparator:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
+  font-size: 0.9rem;
+}
+
+.comparison-table th {
+  font-weight: 600;
+  background-color: #f8f9fa !important;
+  transition: all 0.3s ease;
+}
+
+.comparison-table th.recommended-plan {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+  border-left: 4px solid var(--primary-color);
+  border-right: 4px solid var(--primary-color);
+  transform: scale(1.02);
+  position: relative;
+}
+
+.comparison-table th.recommended-plan::after {
+  content: "⭐ Recomendado";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  vertical-align: middle;
+  padding: 1rem 0.75rem;
+}
+
+.comparison-table tr:hover {
+  background-color: rgba(44, 119, 68, 0.05);
+}
+
+.plan-header {
+  padding: 0.5rem;
+}
+
+.comparison-result {
+  animation: slideInUp 0.6s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendation-content h6 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-content ul {
+  margin-bottom: 1rem;
+}
+
+.recommendation-content li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Estilos para cards de serviços */
+.service-content {
+  padding: 1rem 0;
+}
+
+.service-icon-wrapper {
+  display: inline-block;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-features li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+  transform: translateX(5px);
+  color: var(--primary-color);
+}
+
+/* Cards de soluções complementares */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.bg-primary-light {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.bg-success-light {
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-warning-light {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Planos */
+.plan-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.plan-featured {
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.plan-featured:hover {
+  transform: scale(1.08) translateY(-5px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 8px 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plan-price {
+  margin: 1rem 0;
+}
+
+.plan-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+/* Cards de testemunhos */
+.testimonial-card {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* Animações */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge containers */
+.badge-container {
+  margin: 0.25rem;
+}
+
+.badge {
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Melhorias de acessibilidade */
+.btn:focus,
+.form-select:focus,
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(44, 119, 68, 0.25);
+  outline: none;
+}
+
+/* Loading states */
+.btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.btn.loading::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .plan-featured {
+    transform: scale(1);
+    margin-top: 2rem;
+  }
+  
+  .featured-badge {
+    right: -25px;
+    padding: 6px 35px;
+    font-size: 0.75rem;
+  }
+  
+  .comparison-table {
+    font-size: 0.8rem;
+  }
+  
+  .plan-header {
+    padding: 0.25rem;
+  }
 }
 

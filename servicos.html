@@ -1,929 +1,1086 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgroVision - Serviços</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="assets/img/logoHead.svg"/>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.svg" alt="Logo AgroVision" width="130" />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroVision - Serviços</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/img/logoHead.svg" />
+</head>
 
-          <!-- Botão de hamburger para dispositivos móveis -->
-          <button
-            class="navbar-toggler custom-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#nav-principal"
-            aria-controls="nav-principal"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="bi bi-list"></i>
-          </button>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="assets/img/logo.svg" alt="Logo AgroVision" width="130" />
+        </a>
 
-          <div class="collapse navbar-collapse" id="nav-principal">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">
-                  <i class="bi bi-house-door-fill me-1"></i>Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="sobre.html" class="nav-link">
-                  <i class="bi bi-info-circle-fill me-1"></i>Sobre Nós</a>
-              </li>
-              <li class="nav-item">
-                <a href="servicos.html" class="nav-link active" aria-current="page">
-                  <i class="bi bi-gear-fill me-1"></i>Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a href="contato.html" class="nav-link">
-                  <i class="bi bi-chat-dots-fill me-1"></i>Fale Conosco</a>
-              </li>
-            </ul>
+        <!-- Botão de hamburger para dispositivos móveis -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="bi bi-house-door-fill me-1"></i>Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="sobre.html" class="nav-link">
+                <i class="bi bi-info-circle-fill me-1"></i>Sobre Nós</a>
+            </li>
+            <li class="nav-item">
+              <a href="servicos.html" class="nav-link active" aria-current="page">
+                <i class="bi bi-gear-fill me-1"></i>Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a href="contato.html" class="nav-link">
+                <i class="bi bi-chat-dots-fill me-1"></i>Fale Conosco</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-5 text-center text-white position-relative" style="background-color: #2c7744">
+    <div class="container mt-5 pt-3">
+      <h1 class="display-4 fw-bold">Nossos Serviços</h1>
+      <p class="lead">
+        Conheça as soluções inovadoras que estão transformando o agronegócio
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Introdução aos Serviços -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="lead">
+              A AgroVision oferece um conjunto completo de soluções tecnológicas para
+              potencializar cada aspecto da sua operação agrícola.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 mb-5">
+              <div class="badge-container text-center">
+                <span class="badge rounded-pill bg-primary px-3 py-2 fs-6">
+                  <i class="bi bi-award me-1"></i> Tecnologia de ponta
+                </span>
+              </div>
+              <div class="badge-container text-center">
+                <span class="badge rounded-pill bg-success px-3 py-2 fs-6">
+                  <i class="bi bi-shield-check me-1"></i> Suporte especializado
+                </span>
+              </div>
+              <div class="badge-container text-center">
+                <span class="badge rounded-pill bg-warning px-3 py-2 fs-6 text-dark">
+                  <i class="bi bi-graph-up me-1"></i> Resultados comprovados
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="py-5 text-center text-white position-relative" style="background-color: #2c7744">
-      <div class="container mt-5 pt-3">
-        <h1 class="display-4 fw-bold">Nossos Serviços</h1>
-        <p class="lead">
-          Conheça as soluções inovadoras que estão transformando o agronegócio
-        </p>
       </div>
     </section>
 
-    <main>
-      <!-- Introdução aos Serviços -->
-      <section class="py-5 bg-light">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-              <p class="lead">
-                A AgroVision oferece um conjunto completo de soluções tecnológicas para 
-                potencializar cada aspecto da sua operação agrícola.
-              </p>
-              <div class="d-flex flex-wrap justify-content-center gap-2 mt-4 mb-5">
-                <div class="badge-container text-center">
-                  <span class="badge rounded-pill bg-primary px-3 py-2 fs-6">
-                    <i class="bi bi-award me-1"></i> Tecnologia de ponta
-                  </span>
-                </div>
-                <div class="badge-container text-center">
-                  <span class="badge rounded-pill bg-success px-3 py-2 fs-6">
-                    <i class="bi bi-shield-check me-1"></i> Suporte especializado
-                  </span>
-                </div>
-                <div class="badge-container text-center">
-                  <span class="badge rounded-pill bg-warning px-3 py-2 fs-6 text-dark">
-                    <i class="bi bi-graph-up me-1"></i> Resultados comprovados
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviços Principais -->
-      <section id="solucoes-completas" class="py-5">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="fw-bold">Soluções Completas</h2>
-              <div class="section-divider mx-auto"></div>
-              <p class="lead text-muted mb-5">
-                Nossas tecnologias integradas para maximizar sua produtividade
-              </p>
-            </div>
-          </div>
-          
-          <!-- Serviço 1: Monitoramento por Satélite -->
-          <div class="row align-items-center mb-5 pb-5 border-bottom">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/imgFeatureSensoriamento.jpg" alt="Monitoramento por Satélite" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="col-lg-6">
-              <div class="service-content">
-                <div class="service-icon-wrapper mb-4">
-                  <div class="service-icon bg-primary text-white">
-                    <i class="bi bi-cloud-fill"></i>
-                  </div>
-                </div>
-                <h3 class="mb-4">Monitoramento por Satélite</h3>
-                <p class="lead">
-                  Monitoramento completo da sua propriedade com imagens de satélite de alta resolução, 
-                  permitindo detecção precoce de problemas e otimização da produção.
-                </p>
-                <div class="row mt-4">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Imagens atualizadas a cada 5 dias
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Mapas de índices de vegetação NDVI
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Detecção de áreas com stress hídrico
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Relatórios de evolução da lavoura
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Identificação de falhas de plantio
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Estimativa precisa de área plantada
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <a href="contato.html" class="btn btn-primary">
-                    <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Serviço 2: Análise de Dados Agrícolas -->
-          <div class="row align-items-center mb-5 pb-5 border-bottom flex-lg-row-reverse">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/imgFeatureIA.jpg" alt="Análise de Dados Agrícolas" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="col-lg-6">
-              <div class="service-content">
-                <div class="service-icon-wrapper mb-4">
-                  <div class="service-icon bg-success text-white">
-                    <i class="bi bi-graph-up"></i>
-                  </div>
-                </div>
-                <h3 class="mb-4">Análise de Dados Agrícolas</h3>
-                <p class="lead">
-                  Nossa plataforma de análise transforma dados complexos em estratégias claras e 
-                  acionáveis para maximizar a rentabilidade da sua operação.
-                </p>
-                <div class="row mt-4">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Dashboards personalizados
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Algoritmos de inteligência artificial
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Alertas em tempo real
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Previsões de safra baseadas em dados
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Análise comparativa de desempenho
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Recomendações de otimização
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <a href="contato.html" class="btn btn-success">
-                    <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Serviço 3: Agricultura de Precisão -->
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/imgFeatureIot.jpeg" alt="Agricultura de Precisão" class="img-fluid rounded shadow-sm">
-            </div>
-            <div class="col-lg-6">
-              <div class="service-content">
-                <div class="service-icon-wrapper mb-4">
-                  <div class="service-icon bg-warning text-white">
-                    <i class="bi bi-airplane"></i>
-                  </div>
-                </div>
-                <h3 class="mb-4">Agricultura de Precisão com Drones</h3>
-                <p class="lead">
-                  Utilizamos drones especializados para mapeamentos detalhados, diagnósticos 
-                  fitossanitários e aplicações localizadas de defensivos.
-                </p>
-                <div class="row mt-4">
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Imagens de alta resolução (2cm/pixel)
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Identificação precisa de pragas
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Mapeamento 3D da propriedade
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6">
-                    <ul class="list-unstyled service-features">
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Pulverização seletiva com drones
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Economia de até 60% em defensivos
-                      </li>
-                      <li>
-                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                        Avaliação da qualidade de plantio
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <a href="contato.html" class="btn btn-warning text-white">
-                    <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Soluções Complementares -->
-      <section id="solucoes-complementares" class="py-5 bg-light">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="fw-bold">Soluções Complementares</h2>
-              <div class="section-divider mx-auto"></div>
-              <p class="lead text-muted">
-                Serviços adicionais para potencializar sua operação agrícola
-              </p>
-            </div>
-          </div>
-          
-          <div class="row g-4">
-            <!-- Solução Complementar 1 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="d-flex align-items-center mb-3">
-                    <div class="icon-circle bg-primary-light me-3">
-                      <i class="bi bi-cloud-fill text-primary"></i>
-                    </div>
-                    <h4 class="card-title mb-0">Previsão Climática</h4>
-                  </div>
-                  <p class="card-text">
-                    Previsões meteorológicas precisas para planejamento de operações agrícolas com 
-                    alertas personalizados para sua região.
-                  </p>
-                  <ul class="list-unstyled small mb-0">
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Previsões detalhadas de até 10 dias
-                    </li>
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Alertas de eventos climáticos extremos
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Histórico meteorológico da região
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white border-0 pt-0">
-                  <a href="contato.html" class="btn btn-sm btn-outline-primary">Mais detalhes</a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Solução Complementar 2 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="d-flex align-items-center mb-3">
-                    <div class="icon-circle bg-success-light me-3">
-                      <i class="bi bi-moisture text-success"></i>
-                    </div>
-                    <h4 class="card-title mb-0">Irrigação Inteligente</h4>
-                  </div>
-                  <p class="card-text">
-                    Sistema de irrigação automatizado com sensores que otimiza o uso de água 
-                    baseado nas necessidades reais da plantação.
-                  </p>
-                  <ul class="list-unstyled small mb-0">
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Sensores de umidade do solo em tempo real
-                    </li>
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Economia média de 25% no uso de água
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Controle remoto via aplicativo
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white border-0 pt-0">
-                  <a href="contato.html" class="btn btn-sm btn-outline-success">Mais detalhes</a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Solução Complementar 3 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="d-flex align-items-center mb-3">
-                    <div class="icon-circle bg-warning-light me-3">
-                      <i class="bi bi-clipboard-data text-warning"></i>
-                    </div>
-                    <h4 class="card-title mb-0">Consultoria Agronômica</h4>
-                  </div>
-                  <p class="card-text">
-                    Aconselhamento especializado de agrônomos experientes com base nos 
-                    dados coletados em sua propriedade.
-                  </p>
-                  <ul class="list-unstyled small mb-0">
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Recomendações personalizadas
-                    </li>
-                    <li class="mb-2">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Visitas presenciais programadas
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Relatórios técnicos detalhados
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white border-0 pt-0">
-                  <a href="contato.html" class="btn btn-sm btn-outline-warning">Mais detalhes</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Planos e Pacotes -->
-      <section id="planos" class="py-5">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="fw-bold">Nossos Planos</h2>
-              <div class="section-divider mx-auto"></div>
-              <p class="lead text-muted mb-5">
-                Escolha o plano ideal para as necessidades da sua operação
-              </p>
-            </div>
-          </div>
-          
-          <div class="row g-4 justify-content-center">
-            <!-- Plano Básico -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card plan-card h-100 border-0 shadow">
-                <div class="card-header text-center bg-white border-0 pt-4">
-                  <h5 class="text-uppercase text-muted">Plano</h5>
-                  <h3 class="fw-bold">Básico</h3>
-                  <div class="plan-price">
-                    <span class="display-4 fw-bold">R$ 990</span>
-                    <span class="text-muted">/mês</span>
-                  </div>
-                  <p class="text-muted">Ideal para pequenas propriedades</p>
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled plan-features">
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Monitoramento por satélite (área até 500ha)
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Atualização de imagens quinzenal
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Dashboard básico de análise
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Relatórios mensais
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Suporte por e-mail
-                    </li>
-                    <li class="mb-3 text-muted">
-                      <i class="bi bi-x-circle me-2"></i>
-                      Serviço de drones
-                    </li>
-                    <li class="mb-3 text-muted">
-                      <i class="bi bi-x-circle me-2"></i>
-                      Consultoria agronômica
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white text-center border-0 pb-4">
-                  <a href="contato.html" class="btn btn-outline-primary btn-lg px-4">Selecionar</a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Plano Avançado (em destaque) -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card plan-card plan-featured h-100 border-0 shadow">
-                <div class="featured-badge">Mais Popular</div>
-                <div class="card-header text-center bg-white border-0 pt-4">
-                  <h5 class="text-uppercase text-muted">Plano</h5>
-                  <h3 class="fw-bold">Avançado</h3>
-                  <div class="plan-price">
-                    <span class="display-4 fw-bold">R$ 1.990</span>
-                    <span class="text-muted">/mês</span>
-                  </div>
-                  <p class="text-muted">Para propriedades médias</p>
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled plan-features">
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Monitoramento por satélite (área até 1.500ha)
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Atualização de imagens semanal
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Dashboard completo de análise
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Relatórios semanais
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Suporte por telefone e e-mail
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      1 mapeamento com drone por trimestre
-                    </li>
-                    <li class="mb-3 text-muted">
-                      <i class="bi bi-x-circle me-2"></i>
-                      Consultoria agronômica
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white text-center border-0 pb-4">
-                  <a href="contato.html" class="btn btn-primary btn-lg px-4">Selecionar</a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Plano Premium -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card plan-card h-100 border-0 shadow">
-                <div class="card-header text-center bg-white border-0 pt-4">
-                  <h5 class="text-uppercase text-muted">Plano</h5>
-                  <h3 class="fw-bold">Premium</h3>
-                  <div class="plan-price">
-                    <span class="display-4 fw-bold">R$ 3.490</span>
-                    <span class="text-muted">/mês</span>
-                  </div>
-                  <p class="text-muted">Para grandes operações</p>
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled plan-features">
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Monitoramento por satélite (área até 5.000ha)
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Atualização de imagens a cada 3 dias
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Dashboard avançado com IA preditiva
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Relatórios personalizados
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Suporte prioritário 24/7
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Mapeamentos mensais com drone
-                    </li>
-                    <li class="mb-3">
-                      <i class="bi bi-check-circle-fill text-success me-2"></i>
-                      Consultoria agronômica mensal
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-white text-center border-0 pb-4">
-                  <a href="contato.html" class="btn btn-outline-primary btn-lg px-4">Selecionar</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="row mt-4">
-            <div class="col-12 text-center">
-              <p class="text-muted">
-                Também oferecemos planos personalizados para necessidades específicas.
-                <a href="contato.html" class="text-primary">Entre em contato</a> para mais informações.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Testemunhos de Clientes -->
-      <section id="depoimentos" class="py-5 bg-light">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="fw-bold">Depoimentos de Clientes</h2>
-              <div class="section-divider mx-auto"></div>
-              <p class="lead text-muted">
-                O que dizem os produtores que utilizam nossas soluções
-              </p>
-            </div>
-          </div>
-          
-          <div class="row g-4">
-            <!-- Testemunho 1 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card testimonial-card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="testimonial-quote">
-                    <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                  </div>
-                  <p class="mb-4">
-                    "As análises de satélite da AgroVision nos permitiram identificar problemas na lavoura 
-                    que seriam impossíveis de detectar a olho nu. Economizamos tempo e recursos."
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="assets/img/depoimento1.png" alt="João Silva" class="rounded-circle me-3" width="60">
-                    <div>
-                      <h5 class="mb-0">João Silva</h5>
-                      <p class="text-muted mb-0">Fazenda Esperança, MG</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Testemunho 2 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card testimonial-card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="testimonial-quote">
-                    <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                  </div>
-                  <p class="mb-4">
-                    "O sistema de agricultura de precisão com drones nos ajudou a reduzir o uso de 
-                    defensivos em 45%. Além da economia, diminuímos o impacto ambiental."
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="assets/img/depoimento2.png" alt="Ana Costa" class="rounded-circle me-3" width="60">
-                    <div>
-                      <h5 class="mb-0">Ana Costa</h5>
-                      <p class="text-muted mb-0">Grupo Agrícola Horizonte, MT</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Testemunho 3 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="card testimonial-card h-100 border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="testimonial-quote">
-                    <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
-                  </div>
-                  <p class="mb-4">
-                    "A plataforma de análise de dados transformou nossa maneira de gerenciar a fazenda. 
-                    Conseguimos aumentar a produtividade em 22% já no primeiro ano."
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="assets/img/depoimento3.png" alt="Carlos Mendes" class="rounded-circle me-3" width="60">
-                    <div>
-                      <h5 class="mb-0">Carlos Mendes</h5>
-                      <p class="text-muted mb-0">Fazenda Vale Verde, SP</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- FAQ Section -->
-      <section id="faq" class="py-5">
-        <div class="container">
-          <div class="row mb-5">
-            <div class="col-12 text-center">
-              <h2 class="fw-bold">Perguntas Frequentes</h2>
-              <div class="section-divider mx-auto"></div>
-              <p class="lead text-muted">
-                Respostas para as dúvidas mais comuns sobre nossos serviços
-              </p>
-            </div>
-          </div>
-          
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="accordion" id="faqAccordion">
-                <!-- FAQ Item 1 -->
-                <div class="accordion-item border-0 mb-3 shadow-sm rounded">
-                  <h3 class="accordion-header" id="heading1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                      Como funciona o monitoramento por satélite?
-                    </button>
-                  </h3>
-                  <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                        Nosso sistema utiliza imagens de satélites que capturam frequentemente sua propriedade. Estas imagens são 
-                        processadas por nossos algoritmos que identificam variações na saúde das plantas, problemas com irrigação, 
-                        falhas de plantio e outras anomalias. Você recebe relatórios periódicos e tem acesso a um dashboard 
-                        online onde pode visualizar todos os dados e mapas da sua propriedade.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- FAQ Item 2 -->
-                <div class="accordion-item border-0 mb-3 shadow-sm rounded">
-                  <h3 class="accordion-header" id="heading2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                      Qual o tamanho mínimo de propriedade para usar seus serviços?
-                    </button>
-                  </h3>
-                  <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                        Nossos serviços são escaláveis e podem ser adaptados para propriedades de diferentes tamanhos. 
-                        Para o monitoramento por satélite, trabalhamos com áreas a partir de 20 hectares. Para serviços 
-                        com drones, o tamanho mínimo recomendado é de 5 hectares. Entre em contato conosco para avaliarmos 
-                        a melhor solução para sua propriedade específica.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- FAQ Item 3 -->
-                <div class="accordion-item border-0 mb-3 shadow-sm rounded">
-                  <h3 class="accordion-header" id="heading3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                      Como os dados são acessados pelos clientes?
-                    </button>
-                  </h3>
-                  <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                        Todos os nossos clientes têm acesso a uma plataforma online exclusiva, que pode ser acessada por 
-                        computador, tablet ou smartphone. Na plataforma, você encontra todas as imagens, relatórios, 
-                        análises e recomendações. Também enviamos relatórios periódicos por e-mail e, dependendo do 
-                        plano contratado, realizamos reuniões para apresentação dos resultados e recomendações.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- FAQ Item 4 -->
-                <div class="accordion-item border-0 mb-3 shadow-sm rounded">
-                  <h3 class="accordion-header" id="heading4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                      Quanto tempo demora para implementar os serviços?
-                    </button>
-                  </h3>
-                  <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                        O tempo de implementação varia conforme o serviço contratado e o tamanho da propriedade. Em geral, 
-                        o monitoramento por satélite pode ser ativado em até 7 dias após a assinatura do contrato. Para 
-                        serviços que incluem visitas presenciais, drones ou instalação de sensores IoT, o prazo típico é de 
-                        15 a 30 dias. Durante todo o processo, você terá suporte da nossa equipe técnica.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- FAQ Item 5 -->
-                <div class="accordion-item border-0 shadow-sm rounded">
-                  <h3 class="accordion-header" id="heading5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                      É possível personalizar os pacotes de serviços?
-                    </button>
-                  </h3>
-                  <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p>
-                        Sim, além dos planos padrão, oferecemos soluções personalizadas que se adaptam às necessidades 
-                        específicas do seu negócio. Nossos consultores avaliam sua operação e recomendam o melhor conjunto 
-                        de serviços para maximizar seus resultados. Para uma avaliação personalizada, entre em contato 
-                        conosco por telefone ou pelo formulário de contato em nosso site.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="bg-dark text-white pt-5 pb-4">
+    <!-- Serviços Principais -->
+    <section id="solucoes-completas" class="py-5">
       <div class="container">
-        <div class="row">
-          <!-- Logo e informações da empresa -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <img
-              src="assets/img/LogoFooter.svg"
-              alt="Logo AgroVision"
-              width="130"
-              class="mb-3"/>
-            <p class="small">
-              Soluções tecnológicas inovadoras para o agronegócio, auxiliando
-              produtores a maximizar resultados de forma sustentável.
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold">Soluções Completas</h2>
+            <div class="section-divider mx-auto"></div>
+            <p class="lead text-muted mb-5">
+              Nossas tecnologias integradas para maximizar sua produtividade
             </p>
-            <p class="small">Redes Sociais</p>
-            <div class="mt-3 social-icons">
-              <a href="#" class="social-icon me-3">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="#" class="social-icon me-3">
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a href="#" class="social-icon me-3">
-                <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="https://youtu.be/KHW60BkhiLw" class="social-icon" target="_blank">
-                <i class="bi bi-youtube"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Links rápidos -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Links Rápidos</h5>
-            <ul class="list-unstyled footer-links">
-              <li class="mb-2">
-                <a href="index.html" class="text-white text-decoration-none">
-                  <i class="bi bi-chevron-right small me-2"></i>Home
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href="sobre.html" class="text-white text-decoration-none">
-                  <i class="bi bi-chevron-right small me-2"></i>Sobre Nós
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href="servicos.html" class="text-white text-decoration-none">
-                  <i class="bi bi-chevron-right small me-2"></i>Serviços
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href="contato.html" class="text-white text-decoration-none">
-                  <i class="bi bi-chevron-right small me-2"></i>Fale Conosco
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Contato -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Contato</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="bi bi-geo-alt me-2"></i> Av. Tecnologia, 1500<br/>
-                <span class="ms-4">São Paulo, SP - 04523-001</span>
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-telephone me-2"></i> (11) 3456-7890
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-envelope me-2"></i> contato@agrovision.com.br
-              </li>
-            </ul>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Newsletter</h5>
-            <p class="small">
-              Receba novidades e atualizações sobre tecnologias agrícolas
-            </p>
-            <form id="newsletter-form">
-              <div class="input-group mb-2">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Seu e-mail"
-                  aria-label="E-mail"
-                  required/>
-                <button
-                  class="btn btn-primary"
-                  type="submit"
-                  id="newsletter-button">
-                  Assinar
-                </button>
-              </div>
-              <small
-                id="newsletter-feedback"
-                class="form-text text-light d-none"
-                >E-mail cadastrado com sucesso!</small>
-            </form>
           </div>
         </div>
 
-        <!-- Separador -->
-        <hr class="my-4" />
-
-        <!-- Copyright e políticas -->
-        <div class="row align-items-center">
-          <div class="col-md-7 text-center text-md-start">
-            <p class="small mb-md-0">
-              &copy; 2025 AgroVision - Todos os direitos reservados
-            </p>
+        <!-- Serviço 1: Monitoramento por Satélite -->
+        <div class="row align-items-center mb-5 pb-5 border-bottom">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="assets/img/imgFeatureSensoriamento.jpg" alt="Monitoramento por Satélite"
+              class="img-fluid rounded shadow-sm">
           </div>
-          <div class="col-md-5">
-            <ul class="list-inline text-center text-md-end mb-0">
-              <li class="list-inline-item">
-                <a href="#" class="text-white small">Política de Privacidade</a>
-              </li>
-              <li class="list-inline-item">|</li>
-              <li class="list-inline-item">
-                <a href="#" class="text-white small">Termos de Uso</a>
-              </li>
-              <li class="list-inline-item ms-3">
-                <a href="#" class="back-to-top">
-                  <i class="bi bi-arrow-up-circle"></i>
+          <div class="col-lg-6">
+            <div class="service-content">
+              <div class="service-icon-wrapper mb-4">
+                <div class="service-icon bg-primary text-white">
+                  <i class="bi bi-cloud-fill"></i>
+                </div>
+              </div>
+              <h3 class="mb-4">Monitoramento por Satélite</h3>
+              <p class="lead">
+                Monitoramento completo da sua propriedade com imagens de satélite de alta resolução,
+                permitindo detecção precoce de problemas e otimização da produção.
+              </p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Imagens atualizadas a cada 5 dias
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Mapas de índices de vegetação NDVI
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Detecção de áreas com stress hídrico
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Relatórios de evolução da lavoura
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Identificação de falhas de plantio
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Estimativa precisa de área plantada
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="contato.html" class="btn btn-primary">
+                  <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2: Análise de Dados Agrícolas -->
+        <div class="row align-items-center mb-5 pb-5 border-bottom flex-lg-row-reverse">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="assets/img/imgFeatureIA.jpg" alt="Análise de Dados Agrícolas" class="img-fluid rounded shadow-sm">
+          </div>
+          <div class="col-lg-6">
+            <div class="service-content">
+              <div class="service-icon-wrapper mb-4">
+                <div class="service-icon bg-success text-white">
+                  <i class="bi bi-graph-up"></i>
+                </div>
+              </div>
+              <h3 class="mb-4">Análise de Dados Agrícolas</h3>
+              <p class="lead">
+                Nossa plataforma de análise transforma dados complexos em estratégias claras e
+                acionáveis para maximizar a rentabilidade da sua operação.
+              </p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Dashboards personalizados
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Algoritmos de inteligência artificial
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Alertas em tempo real
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Previsões de safra baseadas em dados
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Análise comparativa de desempenho
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Recomendações de otimização
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="contato.html" class="btn btn-success">
+                  <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 3: Agricultura de Precisão -->
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="assets/img/imgFeatureIot.jpeg" alt="Agricultura de Precisão" class="img-fluid rounded shadow-sm">
+          </div>
+          <div class="col-lg-6">
+            <div class="service-content">
+              <div class="service-icon-wrapper mb-4">
+                <div class="service-icon bg-warning text-white">
+                  <i class="bi bi-airplane"></i>
+                </div>
+              </div>
+              <h3 class="mb-4">Agricultura de Precisão com Drones</h3>
+              <p class="lead">
+                Utilizamos drones especializados para mapeamentos detalhados, diagnósticos
+                fitossanitários e aplicações localizadas de defensivos.
+              </p>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Imagens de alta resolução (2cm/pixel)
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Identificação precisa de pragas
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Mapeamento 3D da propriedade
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="list-unstyled service-features">
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Pulverização seletiva com drones
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Economia de até 60% em defensivos
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>
+                      Avaliação da qualidade de plantio
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4">
+                <a href="contato.html" class="btn btn-warning text-white">
+                  <i class="bi bi-info-circle me-2"></i>Solicitar demonstração
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <script src="js/main.js"></script>
-    </footer>
-  </body>
+    </section>
+
+    <!-- Soluções Complementares -->
+    <section id="solucoes-complementares" class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold">Soluções Complementares</h2>
+            <div class="section-divider mx-auto"></div>
+            <p class="lead text-muted">
+              Serviços adicionais para potencializar sua operação agrícola
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Solução Complementar 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-circle bg-primary-light me-3">
+                    <i class="bi bi-cloud-fill text-primary"></i>
+                  </div>
+                  <h4 class="card-title mb-0">Previsão Climática</h4>
+                </div>
+                <p class="card-text">
+                  Previsões meteorológicas precisas para planejamento de operações agrícolas com
+                  alertas personalizados para sua região.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Previsões detalhadas de até 10 dias
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Alertas de eventos climáticos extremos
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Histórico meteorológico da região
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contato.html" class="btn btn-sm btn-outline-primary">Mais detalhes</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solução Complementar 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-circle bg-success-light me-3">
+                    <i class="bi bi-moisture text-success"></i>
+                  </div>
+                  <h4 class="card-title mb-0">Irrigação Inteligente</h4>
+                </div>
+                <p class="card-text">
+                  Sistema de irrigação automatizado com sensores que otimiza o uso de água
+                  baseado nas necessidades reais da plantação.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Sensores de umidade do solo em tempo real
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Economia média de 25% no uso de água
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Controle remoto via aplicativo
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contato.html" class="btn btn-sm btn-outline-success">Mais detalhes</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solução Complementar 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-circle bg-warning-light me-3">
+                    <i class="bi bi-clipboard-data text-warning"></i>
+                  </div>
+                  <h4 class="card-title mb-0">Consultoria Agronômica</h4>
+                </div>
+                <p class="card-text">
+                  Aconselhamento especializado de agrônomos experientes com base nos
+                  dados coletados em sua propriedade.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Recomendações personalizadas
+                  </li>
+                  <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Visitas presenciais programadas
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Relatórios técnicos detalhados
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contato.html" class="btn btn-sm btn-outline-warning">Mais detalhes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos e Pacotes -->
+    <section id="planos" class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold">Nossos Planos</h2>
+            <div class="section-divider mx-auto"></div>
+            <p class="lead text-muted mb-5">
+              Escolha o plano ideal para as necessidades da sua operação
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Plano Básico -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card plan-card h-100 border-0 shadow">
+              <div class="card-header text-center bg-white border-0 pt-4">
+                <h5 class="text-uppercase text-muted">Plano</h5>
+                <h3 class="fw-bold">Básico</h3>
+                <div class="plan-price">
+                  <span class="display-4 fw-bold">R$ 990</span>
+                  <span class="text-muted">/mês</span>
+                </div>
+                <p class="text-muted">Ideal para pequenas propriedades</p>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled plan-features">
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Monitoramento por satélite (área até 500ha)
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Atualização de imagens quinzenal
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Dashboard básico de análise
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Relatórios mensais
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Suporte por e-mail
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <i class="bi bi-x-circle me-2"></i>
+                    Serviço de drones
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <i class="bi bi-x-circle me-2"></i>
+                    Consultoria agronômica
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white text-center border-0 pb-4">
+                <a href="contato.html" class="btn btn-outline-primary btn-lg px-4">Selecionar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Avançado (em destaque) -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card plan-card plan-featured h-100 border-0 shadow">
+              <div class="featured-badge">Mais Popular</div>
+              <div class="card-header text-center bg-white border-0 pt-4">
+                <h5 class="text-uppercase text-muted">Plano</h5>
+                <h3 class="fw-bold">Avançado</h3>
+                <div class="plan-price">
+                  <span class="display-4 fw-bold">R$ 1.990</span>
+                  <span class="text-muted">/mês</span>
+                </div>
+                <p class="text-muted">Para propriedades médias</p>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled plan-features">
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Monitoramento por satélite (área até 1.500ha)
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Atualização de imagens semanal
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Dashboard completo de análise
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Relatórios semanais
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Suporte por telefone e e-mail
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    1 mapeamento com drone por trimestre
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <i class="bi bi-x-circle me-2"></i>
+                    Consultoria agronômica
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white text-center border-0 pb-4">
+                <a href="contato.html" class="btn btn-primary btn-lg px-4">Selecionar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plano Premium -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card plan-card h-100 border-0 shadow">
+              <div class="card-header text-center bg-white border-0 pt-4">
+                <h5 class="text-uppercase text-muted">Plano</h5>
+                <h3 class="fw-bold">Premium</h3>
+                <div class="plan-price">
+                  <span class="display-4 fw-bold">R$ 3.490</span>
+                  <span class="text-muted">/mês</span>
+                </div>
+                <p class="text-muted">Para grandes operações</p>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled plan-features">
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Monitoramento por satélite (área até 5.000ha)
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Atualização de imagens a cada 3 dias
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Dashboard avançado com IA preditiva
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Relatórios personalizados
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Suporte prioritário 24/7
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Mapeamentos mensais com drone
+                  </li>
+                  <li class="mb-3">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Consultoria agronômica mensal
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white text-center border-0 pb-4">
+                <a href="contato.html" class="btn btn-outline-primary btn-lg px-4">Selecionar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="text-muted">
+              Também oferecemos planos personalizados para necessidades específicas.
+              <a href="contato.html" class="text-primary">Entre em contato</a> para mais informações.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparador Interativo de Planos -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="fw-bold">Compare nossos planos</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="lead text-muted">
+            Use nosso comparador interativo para encontrar o plano ideal para sua propriedade
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="plan-comparator bg-white rounded shadow p-4">
+              <!-- Filtros do Comparador -->
+              <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                  <label for="areaComparador" class="form-label fw-semibold">Área da propriedade (hectares)</label>
+                  <select id="areaComparador" class="form-select" onchange="atualizarComparacao()">
+                    <option value="">Selecione a área</option>
+                    <option value="pequena">Até 500 hectares</option>
+                    <option value="media">501 a 1.500 hectares</option>
+                    <option value="grande">Mais de 1.500 hectares</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="necessidadeComparador" class="form-label fw-semibold">Principal necessidade</label>
+                  <select id="necessidadeComparador" class="form-select" onchange="atualizarComparacao()">
+                    <option value="">Selecione a necessidade</option>
+                    <option value="monitoramento">Monitoramento básico</option>
+                    <option value="analise">Análise avançada</option>
+                    <option value="completo">Solução completa</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="orcamentoComparador" class="form-label fw-semibold">Orçamento mensal</label>
+                  <select id="orcamentoComparador" class="form-select" onchange="atualizarComparacao()">
+                    <option value="">Selecione o orçamento</option>
+                    <option value="baixo">Até R$ 1.500</option>
+                    <option value="medio">R$ 1.501 a R$ 3.000</option>
+                    <option value="alto">Acima de R$ 3.000</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Resultado da Comparação -->
+              <div id="resultadoComparacao" class="comparison-result" style="display: none;">
+                <div class="alert alert-info">
+                  <h5 class="alert-heading">
+                    <i class="bi bi-lightbulb-fill me-2"></i>Recomendação personalizada
+                  </h5>
+                  <hr>
+                  <div id="recomendacaoConteudo">
+                    <!-- Conteúdo será inserido via JavaScript -->
+                  </div>
+                  <div class="mt-3">
+                    <a href="contato.html" class="btn btn-primary">
+                      <i class="bi bi-chat-text me-2"></i>Solicitar Proposta Personalizada
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tabela de Comparação Detalhada -->
+              <div class="mt-4">
+                <div class="table-responsive">
+                  <table class="table table-hover comparison-table">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col" class="border-0">Funcionalidades</th>
+                        <th scope="col" class="text-center border-0">
+                          <div class="plan-header">
+                            <div class="fw-bold">Básico</div>
+                            <div class="text-muted small">R$ 990/mês</div>
+                          </div>
+                        </th>
+                        <th scope="col" class="text-center border-0 bg-primary-light">
+                          <div class="plan-header">
+                            <div class="fw-bold text-primary">Avançado</div>
+                            <div class="text-muted small">R$ 1.990/mês</div>
+                            <div class="badge bg-primary small">Popular</div>
+                          </div>
+                        </th>
+                        <th scope="col" class="text-center border-0">
+                          <div class="plan-header">
+                            <div class="fw-bold">Premium</div>
+                            <div class="text-muted small">R$ 3.490/mês</div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="fw-semibold">Área máxima (hectares)</td>
+                        <td class="text-center">500</td>
+                        <td class="text-center bg-light">1.500</td>
+                        <td class="text-center">5.000</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">Frequência de imagens</td>
+                        <td class="text-center">Quinzenal</td>
+                        <td class="text-center bg-light">Semanal</td>
+                        <td class="text-center">A cada 3 dias</td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">Dashboard de análise</td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip"
+                            title="Dashboard básico"></i>
+                        </td>
+                        <td class="text-center bg-light">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip"
+                            title="Dashboard completo"></i>
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip"
+                            title="Dashboard avançado com IA"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">Mapeamento com drones</td>
+                        <td class="text-center">
+                          <i class="bi bi-x-circle text-muted"></i>
+                        </td>
+                        <td class="text-center bg-light">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip"
+                            title="1x por trimestre"></i>
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip" title="Mensal"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">Consultoria agronômica</td>
+                        <td class="text-center">
+                          <i class="bi bi-x-circle text-muted"></i>
+                        </td>
+                        <td class="text-center bg-light">
+                          <i class="bi bi-x-circle text-muted"></i>
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success" data-bs-toggle="tooltip"
+                            title="Consultoria especializada"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="fw-semibold">Suporte técnico</td>
+                        <td class="text-center">E-mail</td>
+                        <td class="text-center bg-light">Telefone + E-mail</td>
+                        <td class="text-center">24/7 Dedicado</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testemunhos de Clientes -->
+    <section id="depoimentos" class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold">Depoimentos de Clientes</h2>
+            <div class="section-divider mx-auto"></div>
+            <p class="lead text-muted">
+              O que dizem os produtores que utilizam nossas soluções
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Testemunho 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
+                </div>
+                <p class="mb-4">
+                  "As análises de satélite da AgroVision nos permitiram identificar problemas na lavoura
+                  que seriam impossíveis de detectar a olho nu. Economizamos tempo e recursos."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="assets/img/depoimento1.png" alt="João Silva" class="rounded-circle me-3" width="60">
+                  <div>
+                    <h5 class="mb-0">João Silva</h5>
+                    <p class="text-muted mb-0">Fazenda Esperança, MG</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testemunho 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
+                </div>
+                <p class="mb-4">
+                  "O sistema de agricultura de precisão com drones nos ajudou a reduzir o uso de
+                  defensivos em 45%. Além da economia, diminuímos o impacto ambiental."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="assets/img/depoimento2.png" alt="Ana Costa" class="rounded-circle me-3" width="60">
+                  <div>
+                    <h5 class="mb-0">Ana Costa</h5>
+                    <p class="text-muted mb-0">Grupo Agrícola Horizonte, MT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testemunho 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card testimonial-card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote fs-2 text-primary opacity-50"></i>
+                </div>
+                <p class="mb-4">
+                  "A plataforma de análise de dados transformou nossa maneira de gerenciar a fazenda.
+                  Conseguimos aumentar a produtividade em 22% já no primeiro ano."
+                </p>
+                <div class="d-flex align-items-center">
+                  <img src="assets/img/depoimento3.png" alt="Carlos Mendes" class="rounded-circle me-3" width="60">
+                  <div>
+                    <h5 class="mb-0">Carlos Mendes</h5>
+                    <p class="text-muted mb-0">Fazenda Vale Verde, SP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="fw-bold">Perguntas Frequentes</h2>
+            <div class="section-divider mx-auto"></div>
+            <p class="lead text-muted">
+              Respostas para as dúvidas mais comuns sobre nossos serviços
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ Item 1 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                <h3 class="accordion-header" id="heading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="true" aria-controls="collapse1">
+                    Como funciona o monitoramento por satélite?
+                  </button>
+                </h3>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>
+                      Nosso sistema utiliza imagens de satélites que capturam frequentemente sua propriedade. Estas
+                      imagens são
+                      processadas por nossos algoritmos que identificam variações na saúde das plantas, problemas com
+                      irrigação,
+                      falhas de plantio e outras anomalias. Você recebe relatórios periódicos e tem acesso a um
+                      dashboard
+                      online onde pode visualizar todos os dados e mapas da sua propriedade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                <h3 class="accordion-header" id="heading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    Qual o tamanho mínimo de propriedade para usar seus serviços?
+                  </button>
+                </h3>
+                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>
+                      Nossos serviços são escaláveis e podem ser adaptados para propriedades de diferentes tamanhos.
+                      Para o monitoramento por satélite, trabalhamos com áreas a partir de 20 hectares. Para serviços
+                      com drones, o tamanho mínimo recomendado é de 5 hectares. Entre em contato conosco para avaliarmos
+                      a melhor solução para sua propriedade específica.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                <h3 class="accordion-header" id="heading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    Como os dados são acessados pelos clientes?
+                  </button>
+                </h3>
+                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>
+                      Todos os nossos clientes têm acesso a uma plataforma online exclusiva, que pode ser acessada por
+                      computador, tablet ou smartphone. Na plataforma, você encontra todas as imagens, relatórios,
+                      análises e recomendações. Também enviamos relatórios periódicos por e-mail e, dependendo do
+                      plano contratado, realizamos reuniões para apresentação dos resultados e recomendações.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm rounded">
+                <h3 class="accordion-header" id="heading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    Quanto tempo demora para implementar os serviços?
+                  </button>
+                </h3>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>
+                      O tempo de implementação varia conforme o serviço contratado e o tamanho da propriedade. Em geral,
+                      o monitoramento por satélite pode ser ativado em até 7 dias após a assinatura do contrato. Para
+                      serviços que incluem visitas presenciais, drones ou instalação de sensores IoT, o prazo típico é
+                      de
+                      15 a 30 dias. Durante todo o processo, você terá suporte da nossa equipe técnica.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="accordion-item border-0 shadow-sm rounded">
+                <h3 class="accordion-header" id="heading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    É possível personalizar os pacotes de serviços?
+                  </button>
+                </h3>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                  data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>
+                      Sim, além dos planos padrão, oferecemos soluções personalizadas que se adaptam às necessidades
+                      específicas do seu negócio. Nossos consultores avaliam sua operação e recomendam o melhor conjunto
+                      de serviços para maximizar seus resultados. Para uma avaliação personalizada, entre em contato
+                      conosco por telefone ou pelo formulário de contato em nosso site.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo e informações da empresa -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <img src="assets/img/LogoFooter.svg" alt="Logo AgroVision" width="130" class="mb-3" />
+          <p class="small">
+            Soluções tecnológicas inovadoras para o agronegócio, auxiliando
+            produtores a maximizar resultados de forma sustentável.
+          </p>
+          <p class="small">Redes Sociais</p>
+          <div class="mt-3 social-icons">
+            <a href="#" class="social-icon me-3">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-icon me-3">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-icon me-3">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://youtu.be/KHW60BkhiLw" class="social-icon" target="_blank">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links rápidos -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Links Rápidos</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2">
+              <a href="index.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Home
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="sobre.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Sobre Nós
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="servicos.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Serviços
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="contato.html" class="text-white text-decoration-none">
+                <i class="bi bi-chevron-right small me-2"></i>Fale Conosco
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Contato</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i> Av. Tecnologia, 1500<br />
+              <span class="ms-4">São Paulo, SP - 04523-001</span>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i> (11) 3456-7890
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i> contato@agrovision.com.br
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Newsletter</h5>
+          <p class="small">
+            Receba novidades e atualizações sobre tecnologias agrícolas
+          </p>
+          <form id="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="E-mail" required />
+              <button class="btn btn-primary" type="submit" id="newsletter-button">
+                Assinar
+              </button>
+            </div>
+            <small id="newsletter-feedback" class="form-text text-light d-none">E-mail cadastrado com sucesso!</small>
+          </form>
+        </div>
+      </div>
+
+      <!-- Separador -->
+      <hr class="my-4" />
+
+      <!-- Copyright e políticas -->
+      <div class="row align-items-center">
+        <div class="col-md-7 text-center text-md-start">
+          <p class="small mb-md-0">
+            &copy; 2025 AgroVision - Todos os direitos reservados
+          </p>
+        </div>
+        <div class="col-md-5">
+          <ul class="list-inline text-center text-md-end mb-0">
+            <li class="list-inline-item">
+              <a href="#" class="text-white small">Política de Privacidade</a>
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white small">Termos de Uso</a>
+            </li>
+            <li class="list-inline-item ms-3">
+              <a href="#" class="back-to-top">
+                <i class="bi bi-arrow-up-circle"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/servicos.js"></script>
+  </footer>
+</body>
+
 </html>
