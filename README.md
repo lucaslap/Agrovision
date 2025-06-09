@@ -1,7 +1,7 @@
 # 🌱 AgroVision - Soluções Tecnológicas para o Agronegócio
 
 <div align="center">
-  <img src="assets/img/logo.svg" alt="AgroVision Logo" width="200"/>
+  <img src="assets/img/LogoFooter.svg" alt="AgroVision Logo" width="200"/>
   
   [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=flat-square&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
   [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
@@ -304,28 +304,11 @@ O projeto foi desenvolvido com abordagem **Mobile First** e é totalmente respon
 
 ## 👥 Equipe de Desenvolvimento
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="assets/img/ProfileLucas.jpg" width="100px;" alt="Lucas Alves Pereira"/><br>
-      <sub><b>Lucas Alves Pereira</b></sub><br>
-      <sub>Full Stack Developer</sub><br>
-      <a href="https://github.com/lucaslap">GitHub</a>
-    </td>
-    <td align="center">
-      <img src="assets/img/ProfileDiegoK.jpeg" width="100px;" alt="Diego Motoike Kanamori"/><br>
-      <sub><b>Diego Motoike Kanamori</b></sub><br>
-      <sub>UI/UX Designer</sub><br>
-      <a href="https://github.com/D13G0XD">GitHub</a>
-    </td>
-  </tr>
-</table>
-
-## 📊 Estatísticas do Projeto
-
-![GitHub repo size](https://img.shields.io/github/repo-size/lucaslap/Agrovision?style=flat-square)
-![GitHub language count](https://img.shields.io/github/languages/count/lucaslap/Agrovision?style=flat-square)
-![GitHub top language](https://img.shields.io/github/languages/top/lucaslap/Agrovision?style=flat-square)
+- Diego Motoike Kanamori
+- Lucas Alves Pereira
+- Victor Melo Peres
+- Lara Hellen de Paula
+- Joao Silva Portugal Guimarães
 
 ### 🔗 Links Úteis
 - [🌐 Site do Projeto](https://lucaslap.github.io/Agrovision)
