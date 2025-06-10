@@ -190,7 +190,7 @@ Contribuições são muito bem-vindas! Se você quiser sugerir melhorias, corrig
    - Clique no botão "Fork" no GitHub
    - Clone seu fork localmente
 
-2. **Crie uma branch para sua feature**
+2. **Crie uma branch para sua feature a partir da branch stage**
    ```bash
    git checkout -b feature/nome-da-sua-feature
    ```
@@ -219,7 +219,7 @@ Contribuições são muito bem-vindas! Se você quiser sugerir melhorias, corrig
    git push origin feature/nome-da-sua-feature
    ```
 
-6. **Abra um Pull Request**
+6. **Abra um Pull Request para com base branch stage**
    - Vá para o repositório original no GitHub
    - Clique em "New Pull Request"
    - Descreva suas alterações detalhadamente
