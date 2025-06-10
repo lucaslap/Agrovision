@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const botDemoMessage =
     "No momento estou apenas em fase de demonstração, obrigado por testar o meu funcionamento!";
   // URL do avatar do bot - substitua pelo URL da sua imagem
-  const botAvatarUrl = "images/nautilus-chatbot.png";
+  const botAvatarUrl = "assets/img/agrobot.png";
 
   // Função para alternar a visibilidade da janela de chat
   function toggleChatWindow() {
@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         userInputField.focus();
         if (messagesContainer.children.length === 0) {
-          addMessageToChat("Olá eu sou o assistente virtual Nautilus!", "bot");
+          addMessageToChat("Olá eu sou o assistente virtual AgroBot!", "bot");
           addMessageToChat(
-            "Você possui alguma alguma dúvida ou quer aprender algo sobre situações de enchentes?",
+            "Você possui alguma alguma dúvida sobre o funcionamento do nosso software?",
             "bot"
           );
         }
