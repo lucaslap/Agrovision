@@ -93,7 +93,7 @@ function validarEmail(email) {
 // Função para validar formato de telefone
 function validarTelefone(telefone) {
   // Aceita formatos: (99) 99999-9999 ou 99999999999 ou 9999-9999
-  const regex = /^(\(\d{2}\)\s?)?\d{4,5}[-\s]?\d{4}$|^\d{10,11}$/;
+  const regex = /^[1-9]{2}9[0-9]{8}$/;
   return regex.test(telefone);
 }
 
