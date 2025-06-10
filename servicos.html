@@ -960,6 +960,27 @@
         </div>
       </div>
     </section>
+    <!-- Chatbot Section -->
+    <div id="chat-window-container">
+      <div class="card shadow-lg">
+        <div id="chat-header" class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0 text-white">Assistente Virtual Nautilus</h5>
+            </div>
+          <button id="close-chat-btn" type="button" class="btn-close btn-close-white" aria-label="Fechar"></button>
+        </div>
+        <div id="chat-messages" class="card-body"></div>
+        <div id="chat-input-area" class="card-footer d-flex align-items-center p-2">
+          <input type="text" id="user-input" class="form-control me-2" placeholder="Digite sua mensagem...">
+          <button id="send-button" class="btn btn-primary">
+            <i class="bi bi-send-fill"></i>
+          </button>
+        </div>
+        </div>
+      </div>
+      <button id="fab-chat-button" class="btn btn-primary btn-lg rounded-circle" type="button" aria-label="Abrir chat">
+        <i id="fab-icon" class="bi bi-chat-dots-fill"></i>
+      </button>
   </main>
   <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container">
@@ -1080,6 +1101,7 @@
     </div>
     <script src="js/main.js"></script>
     <script src="js/servicos.js"></script>
+    <script src="js/chatbot.js"></script>
   </footer>
 </body>
 
