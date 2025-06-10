@@ -1177,6 +1177,54 @@ footer .list-inline-item:not(:last-child) {
   height: 24px;
 }
 
+/* Estilos para a Calculadora de ROI */
+.roi-calculator-section {
+  position: relative;
+}
+
+.roi-calculator-card {
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.roi-calculator-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px);
+}
+
+.roi-result {
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.roi-result .alert {
+  border: none;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border-left: 5px solid var(--primary-color);
+}
+
+.roi-result h5 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.roi-result .fs-4 {
+  font-size: 1.8rem !important;
+  font-weight: 700;
+}
+
 /* Melhorias de Usabilidade Gerais */
 .form-control:focus {
   border-color: var(--primary-color);
@@ -1635,6 +1683,15 @@ footer .list-inline-item:not(:last-child) {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .roi-calculator-card .btn-lg {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .roi-calculator-card .btn-lg.me-2 {
+    margin-right: 0 !important;
+  }
+  
   .service-icon {
     width: 50px;
     height: 50px;
