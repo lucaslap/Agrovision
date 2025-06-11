@@ -1675,6 +1675,218 @@ footer .list-inline-item:not(:last-child) {
   margin-left: 8px;
 }
 
+/* Chatbot */
+
+#fab-chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1050; /* Garante que fique sobre a maioria dos elementos */
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem; /* Tamanho do ícone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Janela do Chat */
+#chat-window-container {
+  display: none; /* Começa escondida */
+  position: fixed;
+  bottom: 100px; /* Acima do FAB + um pouco de espaço */
+  right: 25px;
+  width: 380px; /* Largura padrão para desktop */
+  max-height: 70vh; /* Altura máxima da janela do chat */
+  z-index: 1040; /* Abaixo do FAB quando fechado, mas acima de outros conteúdos */
+  border-radius: 0.5rem; /* Bordas arredondadas para o container */
+  overflow: hidden; /* Para conter o card arredondado */
+}
+
+#chat-window-container.open {
+  display: block; /* Mostra a janela quando a classe 'open' é adicionada */
+}
+
+#chat-window-container .card {
+  height: 100%; /* Faz o card ocupar todo o container */
+  max-height: 70vh; /* Garante que o card não exceda a altura do container */
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-header {
+  cursor: grab;
+  display: flex; /* Para alinhar avatar e texto */
+  align-items: center; /* Alinhar itens verticalmente */
+}
+
+.header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid white; /* Opcional: borda no avatar do header */
+}
+
+#chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  min-height: 200px;
+}
+
+.message-row {
+  /* Novo container para avatar e balão de mensagem */
+  display: flex;
+  margin-bottom: 0.85rem;
+  align-items: flex-end; /* Alinha o avatar com a parte de baixo do balão */
+}
+
+.message-row.user-message-row {
+  justify-content: flex-end; /* Alinha mensagem do usuário à direita */
+}
+
+.message-row.bot-message-row {
+  justify-content: flex-start; /* Alinha mensagem do bot à esquerda */
+}
+
+.message-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 8px;
+  align-self: flex-start; /* Alinha o avatar ao topo da linha da mensagem */
+}
+
+/* Esconde o avatar do usuário (se não quiser mostrar) */
+.user-message-row .message-avatar {
+  display: none;
+}
+
+/* Ajuste para o avatar do bot ficar à esquerda */
+.bot-message-row .message-avatar {
+  order: -1; /* Garante que o avatar venha antes do balão */
+  margin-right: 8px;
+  margin-left: 0;
+}
+/* Ajuste para o balão de mensagem do bot */
+.bot-message-row .message {
+  margin-left: 0; /* Remove margem extra se o avatar estiver presente */
+}
+
+.message {
+  /* margin-bottom removido daqui, pois agora está no .message-row */
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  max-width: 80%; /* Ajustado para dar espaço ao avatar */
+  word-wrap: break-word;
+  line-height: 1.45;
+  /* display: table removido, flexbox no .message-row cuida do layout */
+}
+
+.user-message {
+  background-color: #007bff;
+  color: white;
+  /* margin-left: auto; movido para .user-message-row com justify-content */
+  border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+  background-color: #e9ecef;
+  color: #212529;
+  /* margin-right: auto; movido para .bot-message-row com justify-content */
+  border-bottom-left-radius: 5px;
+}
+
+#chat-input-area {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+#user-input {
+  border-radius: 25px;
+}
+
+#send-button {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+#send-button .bi {
+  position: relative;
+  left: 1px;
+}
+
+/* Responsividade para Dispositivos Móveis */
+@media (max-width: 767.98px) {
+  #chat-window-container {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    z-index: 1100;
+  }
+
+  #chat-window-container .card {
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  #chat-window-container.open + #fab-chat-button {
+    display: none;
+  }
+
+  #chat-messages {
+    min-height: calc(100vh - 120px);
+  }
+
+  .message {
+    max-width: 85%; /* Ajustado para mobile */
+  }
+}
+
+/* ===== SOCIAL IMPACT CTA SECTION ===== */
+.social-impact-section {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.community-message {
+    border: 2px solid rgba(37, 99, 235, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.community-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+    transition: left 0.8s;
+}
+
+.community-message:hover::before {
+    left: 100%;
+}
+
+.bg-gradient-light {
+    background: linear-gradient(135deg, rgba(249, 250, 251, 1) 0%, rgba(243, 244, 246, 1) 100%) !important;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
