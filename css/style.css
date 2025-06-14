@@ -321,13 +321,21 @@ footer .list-inline-item:not(:last-child) {
 
 #typewriter {
   overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
+  white-space: normal;
+  word-break: break-word;
   border-right: 3px solid #fff;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
   min-height: 60px; /* Altura mínima para evitar saltos de layout */
+  max-width: 90vw;
   position: relative;
+}
+.ajuste-fonte {
+  font-size: calc(3rem - 1.5%);
+}
+/* Remove o cursor ao fim da digitação */
+.typing-complete::after {
+  display: none;
 }
 
 #typewriter::after {
@@ -954,6 +962,9 @@ footer .list-inline-item:not(:last-child) {
   .cta-card {
     padding: 2rem 1.5rem;
   }
+}
+.text-white-85 {
+  color: rgba(255, 255, 255, 0.85); /* 85% branco */
 }
 
 /* Estilos para ícones sociais */
