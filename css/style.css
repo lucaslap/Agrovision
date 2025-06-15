@@ -1168,14 +1168,15 @@ footer .list-inline-item:not(:last-child) {
   box-shadow: none;
 }
 
-.accordion-button::after {
+/*-- .accordion-button::after {
   background-color: #2c7744;
   border-radius: 50%;
   background-position: center;
   background-size: 12px;
   width: 24px;
   height: 24px;
-}
+} --*/
+
 
 /* Estilos para a Calculadora de ROI */
 .roi-calculator-section {
@@ -1439,20 +1440,24 @@ footer .list-inline-item:not(:last-child) {
   border-right: 4px solid var(--primary-color);
   transform: scale(1.02);
   position: relative;
+  z-index: 1;
 }
 
 .comparison-table th.recommended-plan::after {
   content: "⭐ Recomendado";
   position: absolute;
-  top: -10px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--primary-color);
   color: white;
-  padding: 2px 8px;
+  padding: 4px 10px;
   border-radius: 10px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .comparison-table td {
