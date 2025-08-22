@@ -12,10 +12,10 @@ const Footer = () => {
 
   return (
     <footer className="bg-dark text-white pt-5 pb-4 w-100">
-      <div className="container">
-        <div className="row">
+      <div className="container-fluid">
+        <div className="row justify-content-around">
           {/* Logo e informações da empresa */}
-          <div className="col-l g-3 col-md-6 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <img
               src={logoFooter}
               alt="Logo AgroVision"
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           {/* Links rápidos */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <h5 className="text-uppercase mb-4">Links Rápidos</h5>
             <ul className="list-unstyled footer-links">
               <li className="mb-2">
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Contato */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <h5 className="text-uppercase mb-4">Contato</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="col-lg-3 col-md-6 col-sm-12">
             <h5 className="text-uppercase mb-4">Newsletter</h5>
             <p className="small">
               Receba novidades e atualizações sobre tecnologias agrícolas
