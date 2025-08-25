@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import logoFooter from '/assets/img/LogoFooter.svg';
+import { useState } from "react";
+import logoFooter from "/assets/img/LogoFooter.svg";
 
 const Footer = () => {
   const [newsletterFeedback, setNewsletterFeedback] = useState(false);
@@ -37,7 +37,12 @@ const Footer = () => {
               <a href="#" className="social-icon me-3">
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="https://youtu.be/KHW60BkhiLw" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://youtu.be/KHW60BkhiLw"
+                className="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-youtube"></i>
               </a>
             </div>
@@ -75,14 +80,16 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4">Contato</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
-                <i className="bi bi-geo-alt me-2"></i>Av. Tecnologia, 1500<br/>
+                <i className="bi bi-geo-alt me-2"></i>Av. Tecnologia, 1500
+                <br />
                 <span className="ms-4">São Paulo, SP - 04523-001</span>
               </li>
               <li className="mb-2">
                 <i className="bi bi-telephone me-2"></i> (11) 3456-7890
               </li>
               <li className="mb-2">
-                <i className="bi bi-envelope me-2"></i> contato@agrovision.com.br
+                <i className="bi bi-envelope me-2"></i>{" "}
+                contato@agrovision.com.br
               </li>
             </ul>
           </div>
@@ -122,17 +129,22 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-7 text-center text-md-start">
             <p className="small mb-md-0">
-              &copy; {new Date().getFullYear()} AgroVision - Todos os direitos reservados
+              &copy; {new Date().getFullYear()} AgroVision - Todos os direitos
+              reservados
             </p>
           </div>
           <div className="col-md-5">
             <ul className="list-inline text-center text-md-end mb-0">
               <li className="list-inline-item">
-                <a href="#" className="text-white small">Política de Privacidade</a>
+                <a href="#" className="text-white small">
+                  Política de Privacidade
+                </a>
               </li>
               <li className="list-inline-item">|</li>
               <li className="list-inline-item">
-                <a href="#" className="text-white small">Termos de Uso</a>
+                <a href="#" className="text-white small">
+                  Termos de Uso
+                </a>
               </li>
               <li className="list-inline-item ms-3">
                 <a href="#" className="back-to-top">

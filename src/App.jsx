@@ -1,25 +1,24 @@
 import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home";
+import Contato from "./pages/Contato";
+import Servicos from "./pages/Servicos";
+import Sobre from "./pages/Sobre";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main>
-        <div style={{ textAlign: "center", padding: "40px 20px" }}>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-          <h1>Olá</h1>
-        </div>
-      </main>
-      <Footer />
+      <Router>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/sobre" element={<Sobre />} />
+          </Routes>
+        </Layout>
+      </Router>
     </div>
   );
 }
