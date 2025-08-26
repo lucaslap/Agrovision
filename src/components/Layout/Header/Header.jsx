@@ -4,9 +4,9 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
-import NavLinks from "./Layout/Header/NavLinks";
-import BotaoMenuHamburguer from "./BotaoMenuHamburguer/BotaoMenuHamburguer";
-import Logo from "./Logo";
+import NavLinks from "./NavLinks";
+import BotaoMenuHamburguer from "../../BotaoMenuHamburguer/BotaoMenuHamburguer";
+import Logo from "../../Logo";
 
 const Header = () => {
   return (
