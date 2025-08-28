@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
@@ -56,15 +57,15 @@ const HeroSection = () => {
             seu agronegócio
           </p>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
-            <a href="servicos.html" className="btn btn-primary btn-lg px-4">
+            <Link to="/servicos" className="btn btn-primary btn-lg px-4">
               Conheça nossos serviços
-            </a>
-            <a
-              href="contato.html"
+            </Link>
+            <Link
+              to="/contato"
               className="btn btn-outline-light btn-lg px-4"
             >
               Fale conosco
-            </a>
+            </Link>
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center mt-2">
             <a
