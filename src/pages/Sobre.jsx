@@ -5,8 +5,14 @@ import TeamSection from "../components/About/TeamSection";
 import AboutCTASection from "../components/About/AboutCTASection";
 import ChatbotSection from "../components/Sections/ChatbotSection";
 import "../components/About/About.css";
+import { useEffect } from "react";
 
 const Sobre = () => {
+
+  useEffect(() => {
+    document.title = "Agrovision - Sobre Nós";
+  }, []);
+
   return (
     <main>
       {/* Hero Section */}

@@ -6,8 +6,14 @@ import TestimonialSection from "../components/Sections/TestimonialSection";
 import ROICalculatorSection from "../components/Sections/ROICalculatorSection";
 import CTASection from "../components/Sections/CTASection";
 import ChatbotSection from "../components/Sections/ChatbotSection";
+import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = "Agrovision - Home";
+  }, []);
+
   return (
     <main>
       {/* Hero Section com Vídeo Background */}
