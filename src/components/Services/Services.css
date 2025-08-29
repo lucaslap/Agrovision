@@ -1,0 +1,237 @@
+/* Services Page Specific Styles */
+
+/* Service Icon */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-content {
+  padding: 0 20px;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 0;
+}
+
+/* Icon Circles for Additional Services */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.bg-primary-light {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.bg-success-light {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+}
+
+.bg-warning-light {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+/* Pricing Plans */
+.plan-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.plan-featured {
+  border: 2px solid #0d6efd !important;
+  position: relative;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  color: white;
+  padding: 8px 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan-price {
+  margin: 20px 0;
+}
+
+.plan-features li {
+  position: relative;
+  font-size: 0.95rem;
+}
+
+/* Testimonials */
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+  position: relative;
+}
+
+/* FAQ Section */
+.accordion-button {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-body {
+  background-color: white;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Service Cards Animation */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge Container */
+.badge-container {
+  transition: all 0.3s ease;
+}
+
+.badge-container:hover {
+  transform: scale(1.05);
+}
+
+/* Section Divider */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #198754 0%, #157347 100%);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-content {
+    padding: 0;
+    margin-top: 30px;
+  }
+  
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .featured-badge {
+    font-size: 0.7rem;
+    padding: 6px 35px;
+  }
+  
+  .plan-price .display-4 {
+    font-size: 2rem;
+  }
+}
+
+/* Additional Hover Effects */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Features List */
+.service-features {
+  font-size: 0.95rem;
+}
+
+.service-features li {
+  margin-bottom: 8px;
+}
+
+/* Cards Grid */
+.row.g-4 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+/* Plan Cards Special Styling */
+.plan-card .card-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.plan-featured .card-header {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+/* FAQ Accordion Custom Styling */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img:hover {
+  opacity: 0.9;
+}
