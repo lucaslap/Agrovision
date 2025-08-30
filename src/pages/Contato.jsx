@@ -6,8 +6,14 @@ import ContactStatsSection from '../components/Contact/ContactStatsSection';
 import ContactCTASection from '../components/Contact/ContactCTASection';
 import ChatbotSection from '../components/Sections/ChatbotSection';
 import '../components/Contact/Contact.css';
+import { useEffect } from 'react';
 
 const Contato = () => {
+
+  useEffect(() => {
+    document.title = "Agrovision - Fale Conosco"; 
+  }, [])
+
   return (
     <main>
       <ContactHeroSection />

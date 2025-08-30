@@ -7,8 +7,14 @@ import TestimonialsSection from '../components/Services/TestimonialsSection';
 import FAQSection from '../components/Services/FAQSection';
 import ChatbotSection from '../components/Sections/ChatbotSection';
 import '../components/Services/Services.css';
+import { useEffect } from 'react';
 
 const Servicos = () => {
+
+  useEffect(() => {
+    document.title = "Agrovision - Serviços";
+  }, []);
+
   return (
     <main>
       <ServicesHeroSection />
