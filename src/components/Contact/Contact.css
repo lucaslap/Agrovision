@@ -1,0 +1,304 @@
+/* Contact Page Specific Styles */
+
+/* Form Styles */
+.form-control:focus,
+.form-select:focus {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+.form-control,
+.form-select {
+  transition: all 0.3s ease;
+}
+
+.form-control:hover,
+.form-select:hover {
+  border-color: #198754;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-text {
+  font-size: 0.875rem;
+}
+
+/* Contact Info Icons */
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+/* Contact Method Cards */
+.contact-method-card {
+  transition: all 0.3s ease;
+  border: none;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.contact-method-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.contact-method-icon {
+  transition: all 0.5s ease;
+}
+
+.contact-method-icon:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+/* Stats Section */
+.stats-item {
+  transition: all 0.3s ease;
+}
+
+.stats-item:hover {
+  transform: translateY(-5px);
+}
+
+.stats-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #198754, #20c997);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Alert Messages */
+.alert {
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d1e7dd 0%, #badbcc 100%);
+  color: #0f5132;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c2c7 100%);
+  color: #842029;
+}
+
+/* Map Container */
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.map-container:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="1000,100 1000,0 0,100"/></svg>');
+  background-size: cover;
+}
+
+/* Button Animations */
+.btn {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #198754, #20c997);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(45deg, #157347, #1aa179);
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0b5ed7, #520dc2);
+}
+
+.btn-warning {
+  background: linear-gradient(45deg, #ffc107, #fd7e14);
+  border: none;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(45deg, #ffca2c, #fd7e14);
+  color: #000;
+}
+
+/* Character Counter */
+.form-text.text-danger {
+  color: #dc3545 !important;
+  font-weight: 600;
+}
+
+/* Section Divider */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #198754 0%, #157347 100%);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* Contact Cards Background */
+.bg-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%) !important;
+}
+
+/* Form Validation Styles */
+.was-validated .form-control:valid {
+  border-color: #198754;
+}
+
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+/* Loading States */
+.btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  
+  .stats-number {
+    font-size: 2.5rem;
+  }
+  
+  .cta-section .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .contact-method-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Accessibility Improvements */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+  outline: 2px solid #198754;
+  outline-offset: 2px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects for Contact Info */
+.contact-info-item {
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-info-item:hover {
+  background-color: rgba(25, 135, 84, 0.05);
+  transform: translateX(5px);
+}
