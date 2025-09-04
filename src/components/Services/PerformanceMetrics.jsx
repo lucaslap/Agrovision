@@ -12,7 +12,7 @@ const PerformanceMetrics = () => {
       suffix: '%',
       label: 'Aumento médio na produtividade',
       color: 'success',
-      description: 'Clientes relatam aumento médio de 25% na produtividade após implementação'
+      description: 'Clientes relatam aumento na produtividade'
     },
     {
       id: 'cost-reduction',
@@ -112,11 +112,6 @@ const PerformanceMetrics = () => {
                 viewport={{ once: true }}
               >
                 <div className={`bg-${metric.color} bg-opacity-10 rounded-4 p-4 h-100 d-flex flex-column justify-content-center position-relative overflow-hidden`}>
-                  {/* Background decoration */}
-                  <div className={`position-absolute top-0 end-0 opacity-10`} style={{fontSize: '4rem'}}>
-                    <i className={metric.icon}></i>
-                  </div>
-                  
                   {/* Content */}
                   <div className="position-relative">
                     <div className={`bg-${metric.color} text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3`} 
