@@ -10,6 +10,12 @@
   justify-content: center;
   font-size: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-content {
@@ -19,6 +25,11 @@
 .service-features li {
   position: relative;
   padding-left: 0;
+  transition: all 0.2s ease;
+}
+
+.service-features li:hover {
+  transform: translateX(5px);
 }
 
 /* Icon Circles for Additional Services */
@@ -31,6 +42,11 @@
   justify-content: center;
   font-size: 1.25rem;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+  transform: scale(1.1);
 }
 
 .bg-primary-light {
@@ -46,6 +62,268 @@
 .bg-warning-light {
   background-color: rgba(255, 193, 7, 0.1);
   color: #ffc107;
+}
+
+/* Interactive Service Comparator Styles */
+.service-comparator-card {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-comparator-card:hover {
+  border-color: var(--bs-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-comparator-card.selected {
+  border-color: var(--bs-primary);
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.1) 100%);
+}
+
+/* ROI Calculator Enhanced Styles */
+.roi-calculator-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-control-lg:focus,
+.form-select-lg:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.roi-metric-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.roi-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Implementation Tracker Styles */
+.timeline-card {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-number {
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% - 60px);
+  background: linear-gradient(to bottom, var(--bs-primary), rgba(13, 110, 253, 0.3));
+  z-index: 1;
+}
+
+/* Pricing Plans Enhanced */
+.plan-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.plan-card:hover::before {
+  left: 100%;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.plan-featured {
+  border: 2px solid var(--bs-primary) !important;
+  position: relative;
+}
+
+.plan-featured::after {
+  content: 'Recomendado';
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  background: var(--bs-primary);
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* FAQ Section Enhanced */
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%);
+  color: white;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Testimonials Enhanced */
+.testimonial-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .service-content {
+    padding: 0 10px;
+  }
+  
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .plan-featured::after {
+    display: none;
+  }
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhanced Section Dividers */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-success));
+  border-radius: 2px;
+  margin: 1rem auto;
+}
+
+/* Interactive Elements */
+.interactive-element {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.interactive-element:hover {
+  transform: scale(1.02);
+}
+
+.interactive-element:active {
+  transform: scale(0.98);
+}
+
+/* Custom Buttons */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, var(--bs-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* Advanced Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-border {
+  position: relative;
+  background: white;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-success));
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
 }
 
 /* Pricing Plans */
