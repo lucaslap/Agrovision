@@ -180,7 +180,7 @@
 
 /* FAQ Section Enhanced */
 .accordion-button:not(.collapsed) {
-  background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%);
+  /* background: linear-gradient(135deg, var(--bs-primary) 0%, #0056b3 100%); */
   color: white;
 }
 
