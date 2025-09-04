@@ -11,6 +11,7 @@ const Sobre = () => {
 
   useEffect(() => {
     document.title = "Agrovision - Sobre Nós";
+    window.scrollTo(0, 0); 
   }, []);
 
   return (

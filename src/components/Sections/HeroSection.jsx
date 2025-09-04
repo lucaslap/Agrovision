@@ -17,7 +17,7 @@ const HeroSection = () => {
     } else {
       // Em desktop, faz a animação de digitação
       let currentIndex = 0;
-      const typingSpeed = 80;
+      const typingSpeed = 70;
 
       const typingInterval = setInterval(() => {
         if (currentIndex < fullText.length) {

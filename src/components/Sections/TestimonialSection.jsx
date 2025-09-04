@@ -127,18 +127,7 @@ const TestimonialSection = () => {
             <span className="visually-hidden">Próximo</span>
           </motion.button>
 
-          {/* Indicators */}
-          <div className="carousel-indicators testimonial-indicators">
-            {testimonials.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => goToTestimonial(index)}
-                className={index === currentIndex ? 'active' : ''}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.8 }}
-              />
-            ))}
-          </div>
+          
         </div>
       </div>
     </section>

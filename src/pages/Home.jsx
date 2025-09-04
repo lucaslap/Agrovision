@@ -12,6 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     document.title = "Agrovision - Home";
+    window.scrollTo(0, 0);
   }, []);
 
   return (

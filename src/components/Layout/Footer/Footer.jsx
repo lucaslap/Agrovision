@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logoFooter from "/assets/img/LogoFooter.svg";
+import "./Footer.css";
 
 const Footer = () => {
   const [newsletterFeedback, setNewsletterFeedback] = useState(false);

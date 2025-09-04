@@ -12,6 +12,7 @@ const Contato = () => {
 
   useEffect(() => {
     document.title = "Agrovision - Fale Conosco"; 
+    window.scrollTo(0, 0);
   }, [])
 
   return (

@@ -13,6 +13,7 @@ const Servicos = () => {
 
   useEffect(() => {
     document.title = "Agrovision - Serviços";
+    window.scrollTo(0, 0);
   }, []);
 
   return (
