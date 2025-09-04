@@ -6,6 +6,7 @@ import PricingPlansSection from '../components/Services/PricingPlansSection';
 import TestimonialsSection from '../components/Services/TestimonialsSection';
 import FAQSection from '../components/Services/FAQSection';
 import ChatbotSection from '../components/Sections/ChatbotSection';
+import ROICalculatorSection from '../components/Sections/ROICalculatorSection';
 import '../components/Services/Services.css';
 import { useEffect } from 'react';
 
@@ -23,6 +24,7 @@ const Servicos = () => {
       <MainServicesSection />
       <AdditionalServicesSection />
       <PricingPlansSection />
+      <ROICalculatorSection />
       <TestimonialsSection />
       <FAQSection />
       <ChatbotSection />
