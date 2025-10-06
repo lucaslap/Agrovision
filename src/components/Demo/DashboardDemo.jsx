@@ -14,7 +14,7 @@ const DashboardDemo = () => {
     const interval = setInterval(() => {
       setCurrentMetrics(prev => ({
         area: prev.area,
-        productivity: (prev.productivity + (Math.random() - 0.5) * 2).toFixed(1),
+        productivity: parseFloat((prev.productivity + (Math.random() - 0.5) * 2).toFixed(1)),
         health: Math.max(85, Math.min(98, prev.health + (Math.random() - 0.5) * 4)),
         efficiency: Math.max(80, Math.min(95, prev.efficiency + (Math.random() - 0.5) * 3))
       }));
