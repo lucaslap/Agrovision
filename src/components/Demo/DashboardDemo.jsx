@@ -105,7 +105,7 @@ const DashboardDemo = () => {
                 </p>
               </div>
               <div className="col-md-4 text-md-end">
-                <span className="badge bg-success bg-opacity-25 text-success border border-success px-3 py-2">
+                <span className="badge bg-white bg-opacity-75  text-success border border-success px-3 py-2">
                   <i className="bi bi-circle-fill me-1" style={{ fontSize: '0.6rem' }}></i>
                   Online
                 </span>

@@ -129,7 +129,7 @@ const DroneDemo = () => {
         </div>
 
         <div className="row g-4">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <motion.div
               className="drone-flight-path bg-white rounded shadow-sm"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -260,7 +260,16 @@ const DroneDemo = () => {
                 ))}
               </div>
 
-              <div className="mt-4 p-3 bg-warning bg-opacity-10 rounded">
+            </div>
+          </div>
+
+          <div className='col-lg-4'>
+            <div className='h-100'>
+              <h5 className='fw-bold mb-3'>
+                <i className='bi bi-calendar-check me-2 text-info'></i>
+                Agendamentos
+              </h5>
+              <div className="mt-3 p-3 bg-warning bg-opacity-10 rounded">
                 <h6 className="fw-bold text-warning mb-2">
                   <i className="bi bi-clock me-2"></i>
                   Próxima Missão
@@ -272,6 +281,15 @@ const DroneDemo = () => {
                   Produto: Inseticida para lagarta
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className='col-lg-4'>
+            <div className='h-100'>
+              <h5 className='fw-bold mb-3'>
+                <i className='bi bi-clipboard-data me-2 text-success'></i>
+                Previsão
+              </h5>
 
               <div className="mt-3 p-3 bg-success bg-opacity-10 rounded">
                 <h6 className="fw-bold text-success mb-2">
@@ -283,8 +301,12 @@ const DroneDemo = () => {
                   Redução no uso de defensivos com aplicação de precisão
                 </small>
               </div>
+              
             </div>
           </div>
+          
+
+
         </div>
       </div>
     </section>

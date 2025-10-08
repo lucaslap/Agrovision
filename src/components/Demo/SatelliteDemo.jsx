@@ -197,11 +197,11 @@ const SatelliteDemo = () => {
         </div>
 
         <div className="row g-4">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <motion.div
               className="satellite-map-container position-relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -352,32 +352,12 @@ const SatelliteDemo = () => {
             </div>
           </div>
 
-          <div className="col-lg-4">
-            <div className="h-100">
-              <h5 className="fw-bold mb-3">Alertas em Tempo Real</h5>
-              
-              <div className="d-flex flex-column gap-3">
-                {alerts.map((alert, index) => (
-                  <motion.div
-                    key={alert.id}
-                    className={`demo-alert alert-${alert.type}`}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="d-flex">
-                      <i className={`${alert.icon} me-2 mt-1`}></i>
-                      <div className="flex-grow-1">
-                        <div className="fw-medium">{alert.message}</div>
-                        <small className="text-muted">{alert.time}</small>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+        </div>
 
-              <div className="mt-4 p-3 bg-white rounded shadow-sm">
+        <div className='row g-4 mt-3'>
+
+          <div className='col-lg-6'>
+            <div className="mt-4 p-3 bg-white rounded shadow-sm">
                 <h6 className="fw-bold mb-3">Estatísticas da Fazenda</h6>
                 <div className="row g-3">
                   <div className="col-6">
@@ -432,9 +412,41 @@ const SatelliteDemo = () => {
                   ))}
                 </div>
               </div>
+          </div>
+
+          <div className="col-lg-6">
+            <h5 className="fw-bold mt-3">
+              <i className='bi bi-record-fill text-danger mr-2'></i>
+              Alertas em Tempo Real</h5>
+            <div className="h-100">
+              
+              
+              <div className="d-flex flex-column gap-3">
+                {alerts.map((alert, index) => (
+                  <motion.div
+                    key={alert.id}
+                    className={`demo-alert alert-${alert.type}`}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="d-flex">
+                      <i className={`${alert.icon} me-2 mt-1`}></i>
+                      <div className="flex-grow-1">
+                        <div className="fw-medium">{alert.message}</div>
+                        <small className="text-muted">{alert.time}</small>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
+                  
         </div>
+
+
       </div>
     </section>
   );

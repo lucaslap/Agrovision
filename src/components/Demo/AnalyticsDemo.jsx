@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 const AnalyticsDemo = () => {
   const [selectedMetric, setSelectedMetric] = useState('productivity');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [showResults, setShowResults] = useState(false);
 
   const metrics = {
     productivity: {
@@ -30,14 +31,6 @@ const AnalyticsDemo = () => {
       trend: 'down',
       color: 'info'
     },
-    fertilizer: {
-      name: 'Uso de Fertilizantes',
-      current: '285 kg/ha',
-      prediction: '267 kg/ha',
-      change: '-6.3%',
-      trend: 'down',
-      color: 'warning'
-    }
   };
 
   const recommendations = [
@@ -68,8 +61,12 @@ const AnalyticsDemo = () => {
   ];
 
   const handleAnalyze = () => {
+    setShowResults(false);
     setIsAnalyzing(true);
-    setTimeout(() => setIsAnalyzing(false), 3000);
+    setTimeout(() => {
+      setIsAnalyzing(false);
+      setShowResults(true);
+    }, 3000);
   };
 
   return (
@@ -100,10 +97,10 @@ const AnalyticsDemo = () => {
         </div>
 
         <div className="row g-4">
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <div className="row g-3 mb-4">
               {Object.entries(metrics).map(([key, metric]) => (
-                <div key={key} className="col-md-6">
+                <div key={key} className="col-md-4">
                   <motion.div
                     className={`chart-container border ${selectedMetric === key ? 'border-primary' : ''}`}
                     initial={{ opacity: 0, y: 20 }}
@@ -180,16 +177,22 @@ const AnalyticsDemo = () => {
               )}
             </motion.div>
           </div>
-
-          <div className="col-lg-4">
-            <div className="h-100">
-              <h5 className="fw-bold mb-3">
-                <i className="bi bi-lightbulb me-2 text-warning"></i>
-                Recomendações IA
-              </h5>
-              
-              <div className="d-flex flex-column gap-3">
-                {recommendations.map((rec, index) => (
+          
+          <div className="col-lg-12">
+            {showResults && (
+              <motion.div 
+                className="h-100"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h5 className="fw-bold mb-3">
+                  <i className="bi bi-lightbulb me-2 text-warning"></i>
+                  Recomendações IA
+                </h5>
+                
+                <div className="d-flex flex-column gap-3">
+                  {recommendations.map((rec, index) => (
                   <motion.div
                     key={rec.id}
                     className="p-3 bg-white rounded shadow-sm border-start border-3"
@@ -222,23 +225,24 @@ const AnalyticsDemo = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
-
-              <div className="mt-4 p-3 bg-primary bg-opacity-5 rounded">
-                <h6 className="fw-bold text-primary mb-2">
-                  <i className="bi bi-trophy me-2"></i>
-                  ROI Estimado
-                </h6>
-                <div className="h3 text-primary mb-1">R$ 847.300</div>
-                <small className="text-muted">Retorno previsto na safra atual</small>
-                <div className="mt-2">
-                  <div className="progress" style={{ height: '8px' }}>
-                    <div className="progress-bar bg-success" style={{ width: '78%' }}></div>
-                  </div>
-                  <small className="text-muted">78% de confiança na previsão</small>
                 </div>
-              </div>
-            </div>
+
+                <div className="mt-4 p-3 bg-white bg-opacity-5 rounded">
+                  <h6 className="fw-bold text-primary mb-2">
+                    <i className="bi bi-trophy me-2"></i>
+                    ROI Estimado
+                  </h6>
+                  <div className="h3 text-primary mb-1">R$ 847.300</div>
+                  <small className="text-muted">Retorno previsto na safra atual</small>
+                  <div className="mt-2">
+                    <div className="progress" style={{ height: '8px' }}>
+                      <div className="progress-bar bg-success" style={{ width: '78%' }}></div>
+                    </div>
+                    <small className="text-muted">78% de confiança na previsão</small>
+                  </div>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

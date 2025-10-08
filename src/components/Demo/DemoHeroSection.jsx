@@ -11,7 +11,7 @@ const DemoHeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="demo-badge px-3 py-2 rounded-pill mb-3 d-inline-block">
+              <span className="demo-badge px-3 py-2 mt-5 rounded-pill mb-3 d-inline-block">
                 <i className="bi bi-play-circle me-2"></i>
                 Demonstração Interativa
               </span>

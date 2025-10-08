@@ -7,7 +7,7 @@ const FeatureToggle = () => {
   const features = {
     satellite: {
       name: 'Monitoramento por Satélite',
-      icon: 'bi-satellite',
+      icon: 'bi-display',
       description: 'Imagens de alta resolução e análise NDVI em tempo real'
     },
     analytics: {
