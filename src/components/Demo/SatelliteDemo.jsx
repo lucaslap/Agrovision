@@ -33,14 +33,10 @@ const MapController = ({ currentView }) => {
 const SatelliteDemo = () => {
   const [currentView, setCurrentView] = useState('rgb');
   const [scanProgress, setScanProgress] = useState(0);
-  const [mapLoaded, setMapLoaded] = useState(false);
 
   // Coordenadas de uma fazenda real em Primavera do Leste, MT
   const farmCenter = [-14.2350, -50.5945];
-  const mapBounds = [
-    [-15.5461, -54.3052], // Southwest
-    [-15.5661, -54.2852]  // Northeast
-  ];
+
 
   // Polígonos representando diferentes talhões da fazenda
   const farmFields = [
@@ -211,7 +207,6 @@ const SatelliteDemo = () => {
                   center={farmCenter}
                   zoom={15}
                   style={{ height: '100%', width: '100%' }}
-                  whenCreated={() => setMapLoaded(true)}
                   scrollWheelZoom={false}
                   dragging={true}
                   zoomControl={true}

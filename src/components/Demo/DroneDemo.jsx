@@ -5,6 +5,7 @@ const DroneDemo = () => {
   const [missionStatus, setMissionStatus] = useState('planning');
   const [dronePosition, setDronePosition] = useState({ x: 0, y: 0 });
   const [completedArea, setCompletedArea] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
 
   const missionPhases = {
     planning: {
@@ -75,6 +76,7 @@ const DroneDemo = () => {
     
     setMissionStatus(phases[0]);
     setCompletedArea(0);
+    setShowDetails(false);
     
     const interval = setInterval(() => {
       currentPhaseIndex++;
@@ -83,6 +85,7 @@ const DroneDemo = () => {
         setCompletedArea((currentPhaseIndex / phases.length) * 100);
       } else {
         clearInterval(interval);
+        setShowDetails(true);
       }
     }, 2000);
   };
@@ -217,96 +220,98 @@ const DroneDemo = () => {
             </div>
           </div>
 
-          <div className="col-lg-4">
-            <div className="h-100">
-              <h5 className="fw-bold mb-3">
-                <i className="bi bi-exclamation-triangle me-2 text-warning"></i>
-                Problemas Detectados
-              </h5>
+          {showDetails && missionStatus === 'completed' && (
+            <>
+              <div className="col-lg-4">
+                <div className="h-100">
+                  <h5 className="fw-bold mb-3">
+                    <i className="bi bi-exclamation-triangle me-2 text-warning"></i>
+                    Problemas Detectados
+                  </h5>
               
-              <div className="d-flex flex-column gap-3">
-                {detectedIssues.map((issue, index) => (
-                  <motion.div
-                    key={issue.id}
-                    className="p-3 bg-white rounded shadow-sm"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="d-flex justify-content-between align-items-start mb-2">
-                      <div className="d-flex align-items-center">
-                        <div className={`bg-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'} bg-opacity-10 rounded-circle p-2 me-2`}>
-                          <i className={`bi bi-${issue.type === 'pest' ? 'bug' : issue.type === 'water' ? 'droplet' : 'leaf'} text-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'}`}></i>
+                  <div className="d-flex flex-column gap-3">
+                    {detectedIssues.map((issue, index) => (
+                      <motion.div
+                        key={issue.id}
+                        className="p-3 bg-white rounded shadow-sm"
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="d-flex justify-content-between align-items-start mb-2">
+                          <div className="d-flex align-items-center">
+                            <div className={`bg-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'} bg-opacity-10 rounded-circle p-2 me-2`}>
+                              <i className={`bi bi-${issue.type === 'pest' ? 'bug' : issue.type === 'water' ? 'droplet' : 'leaf'} text-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'}`}></i>
+                            </div>
+                            <div>
+                              <h6 className="fw-bold mb-0">{issue.description}</h6>
+                            </div>
+                          </div>
+                          <span className={`badge bg-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'} bg-opacity-25 text-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'}`}>
+                            {issue.severity === 'high' ? 'Alta' : issue.severity === 'medium' ? 'Média' : 'Baixa'}
+                          </span>
                         </div>
-                        <div>
-                          <h6 className="fw-bold mb-0">{issue.description}</h6>
+                        
+                        <div className="small text-muted mb-2">
+                          <i className="bi bi-geo-alt me-1"></i>
+                          {issue.location} • {issue.area}
                         </div>
-                      </div>
-                      <span className={`badge bg-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'} bg-opacity-25 text-${issue.severity === 'high' ? 'danger' : issue.severity === 'medium' ? 'warning' : 'info'}`}>
-                        {issue.severity === 'high' ? 'Alta' : issue.severity === 'medium' ? 'Média' : 'Baixa'}
-                      </span>
-                    </div>
-                    
-                    <div className="small text-muted mb-2">
-                      <i className="bi bi-geo-alt me-1"></i>
-                      {issue.location} • {issue.area}
-                    </div>
-                    
-                    <div className="small">
-                      <strong>Ação recomendada:</strong> {issue.action}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-            </div>
-          </div>
-
-          <div className='col-lg-4'>
-            <div className='h-100'>
-              <h5 className='fw-bold mb-3'>
-                <i className='bi bi-calendar-check me-2 text-info'></i>
-                Agendamentos
-              </h5>
-              <div className="mt-3 p-3 bg-warning bg-opacity-10 rounded">
-                <h6 className="fw-bold text-warning mb-2">
-                  <i className="bi bi-clock me-2"></i>
-                  Próxima Missão
-                </h6>
-                <div className="small">
-                  <strong>Aplicação de defensivos</strong><br />
-                  Agendada para: <span className="text-warning">Amanhã, 06:00</span><br />
-                  Área: Talhão 2 - 12.5 ha<br />
-                  Produto: Inseticida para lagarta
+                        
+                        <div className="small">
+                          <strong>Ação recomendada:</strong> {issue.action}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div className='col-lg-4'>
-            <div className='h-100'>
-              <h5 className='fw-bold mb-3'>
-                <i className='bi bi-clipboard-data me-2 text-success'></i>
-                Previsão
-              </h5>
-
-              <div className="mt-3 p-3 bg-success bg-opacity-10 rounded">
-                <h6 className="fw-bold text-success mb-2">
-                  <i className="bi bi-graph-up me-2"></i>
-                  Economia Estimada
-                </h6>
-                <div className="h4 text-success mb-1">60%</div>
-                <small className="text-muted">
-                  Redução no uso de defensivos com aplicação de precisão
-                </small>
+              <div className="col-lg-4">
+                <div className='h-100'>
+                  <h5 className='fw-bold mb-3'>
+                    <i className='bi bi-calendar-check me-2 text-info'></i>
+                    Agendamentos
+                  </h5>
+                  <div className="mt-3 p-3 bg-warning bg-opacity-10 rounded">
+                    <h6 className="fw-bold text-warning mb-2">
+                      <i className="bi bi-clock me-2"></i>
+                      Próxima Missão
+                    </h6>
+                    <div className="small">
+                      <strong>Aplicação de defensivos</strong><br />
+                      Agendada para: <span className="text-warning">Amanhã, 06:00</span><br />
+                      Área: Talhão 2 - 12.5 ha<br />
+                      Produto: Inseticida para lagarta
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-            </div>
-          </div>
+
+              <div className='col-lg-4'>
+                <div className='h-100'>
+                  <h5 className='fw-bold mb-3'>
+                    <i className='bi bi-clipboard-data me-2 text-success'></i>
+                    Previsão
+                  </h5>
+
+                  <div className="mt-3 p-3 bg-success bg-opacity-10 rounded">
+                    <h6 className="fw-bold text-success mb-2">
+                      <i className="bi bi-graph-up me-2"></i>
+                      Economia Estimada
+                    </h6>
+                    <div className="h4 text-success mb-1">60%</div>
+                    <small className="text-muted">
+                      Redução no uso de defensivos com aplicação de precisão
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
           
 
-
+          
         </div>
       </div>
     </section>
