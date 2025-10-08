@@ -22,20 +22,12 @@ const Demo = () => {
       {/* Dashboard Overview */}
       <DashboardDemo />
 
-      {/* Feature Toggle */}
-      <FeatureToggle />
-
       {/* Satellite Monitoring Demo */}
       <SatelliteDemo />
 
       {/* Data Analytics Demo */}
       <AnalyticsDemo />
 
-      {/* Drone Operations Demo */}
-      <DroneDemo />
-
-      {/* CTA Section */}
-      <DemoCTASection />
     </main>
   );
 };
