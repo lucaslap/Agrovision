@@ -30,7 +30,7 @@ const MapController = ({ currentView }) => {
   return null;
 };
 
-const SatelliteDemo = () => {
+const   SatelliteDemo = () => {
   const [currentView, setCurrentView] = useState('rgb');
   const [scanProgress, setScanProgress] = useState(0);
 
@@ -268,18 +268,6 @@ const SatelliteDemo = () => {
                   ))}
                 </MapContainer>
               </div>
-              
-              {/* Overlay com informações */}
-              <div className="position-absolute top-0 start-0 p-3" style={{ zIndex: 1000 }}>
-                <div className="bg-white rounded shadow-sm p-2 mb-2" style={{ backdropFilter: 'blur(10px)' }}>
-                  <small className="text-muted d-block">Coordenadas</small>
-                  <strong>-15.5561°S, -54.2952°W</strong>
-                </div>
-                <div className="bg-white rounded shadow-sm p-2" style={{ backdropFilter: 'blur(10px)' }}>
-                  <small className="text-muted d-block">Última atualização</small>
-                  <strong>Hoje, 14:30</strong>
-                </div>
-              </div>
 
               {/* Legenda NDVI */}
               {currentView === 'ndvi' && (
@@ -314,21 +302,6 @@ const SatelliteDemo = () => {
                 </div>
               )}
 
-              {/* Barra de progresso de processamento */}
-              <div className="position-absolute bottom-0 start-0 end-0 p-3" style={{ zIndex: 1000 }}>
-                <div className="bg-white rounded shadow-sm p-2" style={{ backdropFilter: 'blur(10px)' }}>
-                  <div className="progress mb-2" style={{ height: '6px' }}>
-                    <div 
-                      className="progress-bar bg-primary" 
-                      style={{ width: `${scanProgress}%` }}
-                    ></div>
-                  </div>
-                  <small className="text-muted">
-                    <i className="loading-spinner bi bi-arrow-clockwise me-1"></i>
-                    Processando imagens... {scanProgress}%
-                  </small>
-                </div>
-              </div>
             </motion.div>
 
             <div className="mt-3">
