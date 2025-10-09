@@ -72,7 +72,7 @@ const HeroSection = () => {
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center mt-2">
             <a
-              href="https://youtu.be/YQPrRInLmVE?si=hd9x8C8kN6xgMubE"
+              href="https://youtu.be/INwR3C1bkKs"
               className="btn btn-secondary btn-lg px-5"
               target="_blank"
             >
