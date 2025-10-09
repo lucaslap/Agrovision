@@ -54,9 +54,7 @@ const CTASection = () => {
                     Entre em contato hoje mesmo para uma demonstração gratuita
                     das nossas soluções e descubra como a tecnologia pode
                     transformar sua produtividade.
-                  </motion.p>
-
-                  <motion.div 
+                  </motion.p>                  <motion.div 
                     className="d-flex gap-3 flex-column flex-sm-row justify-content-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -64,19 +62,18 @@ const CTASection = () => {
                     viewport={{ once: true }}
                   >
                     <Link
-                      to="/contato"
+                      to="/demo"
                       className="btn btn-light btn-lg px-4 fw-semibold"
                       style={{ textDecoration: 'none' }}
                     >
-                      <i className="bi bi-calendar-check me-2"></i>Agende uma
-                      demonstração
+                      <i className="bi bi-play-circle me-2"></i>Ver Demonstração
                     </Link>
                     <Link
                       to="/contato"
                       className="btn btn-outline-light btn-lg px-4"
                       style={{ textDecoration: 'none' }}
                     >
-                      <i className="bi bi-telephone me-2"></i>Fale conosco
+                      <i className="bi bi-calendar-check me-2"></i>Agendar Consultoria
                     </Link>
                   </motion.div>
 

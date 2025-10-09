@@ -23,8 +23,7 @@ const NavLinks = () => {
         >
           <i className="bi bi-info-circle-fill me-1"></i>Sobre Nós
         </Link>
-      </li>
-      <li className="nav-item">
+      </li>      <li className="nav-item">
         <Link
           to="/servicos"
           className={`nav-link ${
@@ -32,6 +31,16 @@ const NavLinks = () => {
           }`}
         >
           <i className="bi bi-gear-fill me-1"></i>Serviços
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link
+          to="/demo"
+          className={`nav-link ${
+            location.pathname === "/demo" ? "active" : ""
+          }`}
+        >
+          <i className="bi bi-play-circle-fill me-1"></i>Demonstração
         </Link>
       </li>
       <li className="nav-item">

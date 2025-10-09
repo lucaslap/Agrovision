@@ -55,10 +55,13 @@ const HeroSection = () => {
           <p className="lead my-4 text-white">
             Soluções inteligentes para monitoramento, análise e otimização do
             seu agronegócio
-          </p>
-          <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+          </p>          <div className="d-grid gap-2 d-md-flex justify-content-md-center">
             <Link to="/servicos" className="btn btn-primary btn-lg px-4">
               Conheça nossos serviços
+            </Link>
+            <Link to="/demo" className="btn btn-success btn-lg px-4">
+              <i className="bi bi-play-circle me-2"></i>
+              Ver Demonstração
             </Link>
             <Link
               to="/contato"
@@ -69,7 +72,7 @@ const HeroSection = () => {
           </div>
           <div className="d-grid gap-2 d-md-flex justify-content-md-center mt-2">
             <a
-              href="https://youtu.be/YQPrRInLmVE?si=hd9x8C8kN6xgMubE"
+              href="https://youtu.be/55iU5Mz41YI"
               className="btn btn-secondary btn-lg px-5"
               target="_blank"
             >
