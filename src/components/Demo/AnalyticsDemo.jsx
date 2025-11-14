@@ -70,104 +70,185 @@ const AnalyticsDemo = () => {
   };
 
   return (
-    <section className="py-5">
+    <section className="py-5" style={{ background: 'linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%)' }}>
       <div className="container">
         <div className="row justify-content-center mb-5">
-          <div className="col-lg-8 text-center">
-            <motion.h2
-              className="fw-bold mb-3"
-              initial={{ opacity: 0, y: 20 }}
+          <div className="col-lg-10 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <i className="bi bi-graph-up me-2 text-success"></i>
-              Análise de Dados com IA
-            </motion.h2>
-            <motion.p
-              className="lead text-muted"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Inteligência artificial que transforma dados em decisões estratégicas
-            </motion.p>
+              <div className="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill mb-4" 
+                   style={{ background: 'linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%)', border: '1px solid rgba(40, 167, 69, 0.2)' }}>
+                <i className="bi bi-robot text-success" style={{ fontSize: '1.2rem' }}></i>
+                <span className="fw-semibold text-success">Machine Learning & IA</span>
+              </div>
+              
+              <h2 className="fw-bold mb-3" style={{ fontSize: '2.5rem' }}>
+                <i className="bi bi-graph-up me-3" style={{ color: '#28a745', fontSize: '2.5rem' }}></i>
+                Análise Preditiva com IA
+              </h2>
+              <p className="lead text-muted" style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
+                Inteligência artificial que transforma dados históricos em previsões precisas
+                e decisões estratégicas para maximizar sua produtividade
+              </p>
+            </motion.div>
           </div>
         </div>
 
         <div className="row g-4">
           <div className="col-lg-12">
-            <div className="d-flex flex-column gap-3 mb-4">
+            <div className="d-flex flex-column gap-4 mb-5">
               {Object.entries(metrics).map(([key, metric], index) => (
                 <motion.div
                   key={key}
-                  className={`position-relative rounded-4 overflow-hidden ${selectedMetric === key ? 'shadow-lg' : 'shadow-sm'}`}
+                  className="position-relative rounded-4 overflow-hidden"
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   onClick={() => setSelectedMetric(key)}
+                  whileHover={{ 
+                    y: -5,
+                    boxShadow: selectedMetric === key 
+                      ? '0 20px 50px rgba(40, 167, 69, 0.25)'
+                      : '0 15px 40px rgba(0,0,0,0.12)',
+                    transition: { duration: 0.2 }
+                  }}
                   style={{ 
                     cursor: 'pointer',
                     background: selectedMetric === key 
-                      ? `linear-gradient(135deg, rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.1) 0%, rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.05) 100%)`
-                      : 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%)',
-                    border: selectedMetric === key ? `2px solid var(--bs-${metric.color})` : '1px solid rgba(0,0,0,0.08)',
-                    backdropFilter: 'blur(10px)'
+                      ? `linear-gradient(135deg, rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.15) 0%, rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.08) 100%)`
+                      : 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.9) 100%)',
+                    border: selectedMetric === key ? `3px solid var(--bs-${metric.color})` : '2px solid rgba(0,0,0,0.08)',
+                    backdropFilter: 'blur(10px)',
+                    boxShadow: selectedMetric === key 
+                      ? '0 15px 40px rgba(40, 167, 69, 0.2)'
+                      : '0 8px 25px rgba(0,0,0,0.08)',
+                    transition: 'all 0.3s ease'
                   }}
                   role="button"
                   tabIndex={0}
                   onKeyPress={(e) => e.key === 'Enter' && setSelectedMetric(key)}
                   aria-label={`Selecionar métrica de ${metric.name}`}
                 >
+                  {/* Indicator Bar */}
+                  {selectedMetric === key && (
+                    <motion.div
+                      className="position-absolute top-0 start-0 w-100"
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      style={{
+                        height: '6px',
+                        background: `linear-gradient(90deg, var(--bs-${metric.color}), rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.5))`,
+                        transformOrigin: 'left'
+                      }}
+                    />
+                  )}
+                  
                   <div className="p-4">
                     <div className="row align-items-center">
                       <div className="col-auto">
-                        <div 
-                          className={`rounded-circle d-flex align-items-center justify-content-center`}
+                        <motion.div 
+                          className="rounded-3 d-flex align-items-center justify-content-center"
+                          animate={selectedMetric === key ? { scale: [1, 1.1, 1] } : { scale: 1 }}
+                          transition={{ duration: 0.5 }}
                           style={{
-                            width: '72px',
-                            height: '72px',
-                            background: `linear-gradient(135deg, var(--bs-${metric.color}) 0%, var(--bs-${metric.color}) 100%)`,
-                            boxShadow: `0 8px 20px rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.3)`
+                            width: '80px',
+                            height: '80px',
+                            background: `linear-gradient(135deg, var(--bs-${metric.color}) 0%, rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.8) 100%)`,
+                            boxShadow: selectedMetric === key 
+                              ? `0 10px 30px rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.4)`
+                              : `0 8px 20px rgba(${metric.color === 'success' ? '40, 167, 69' : metric.color === 'primary' ? '0, 123, 255' : '23, 162, 184'}, 0.2)`
                           }}
                         >
-                          <i className="bi bi-graph-up-arrow text-white" style={{ fontSize: '2rem' }}></i>
-                        </div>
+                          <i className="bi bi-graph-up-arrow text-white" style={{ fontSize: '2.2rem' }}></i>
+                        </motion.div>
                       </div>
                       
                       <div className="col">
-                        <div className="mb-1">
-                          <small className="text-uppercase fw-semibold text-muted" style={{ fontSize: '0.75rem', letterSpacing: '1px' }}>
+                        <div className="mb-2">
+                          <small className="text-uppercase fw-bold text-muted d-flex align-items-center gap-2" style={{ fontSize: '0.75rem', letterSpacing: '1.5px' }}>
+                            <i className="bi bi-dot" style={{ fontSize: '1.5rem', color: `var(--bs-${metric.color})` }}></i>
                             {metric.name}
                           </small>
                         </div>
-                        <div className="d-flex align-items-end gap-3">
-                          <h2 className="mb-0 fw-bold" style={{ fontSize: '2.5rem', lineHeight: '1' }}>{metric.current}</h2>
-                          <div className="mb-1">
-                            <span className={`badge bg-${metric.color} bg-opacity-10 text-${metric.color} px-3 py-2`} style={{ fontSize: '0.9rem' }}>
+                        <div className="d-flex align-items-end gap-3 mb-2">
+                          <motion.h2 
+                            className="mb-0 fw-bold" 
+                            style={{ fontSize: '2.8rem', lineHeight: '1', color: '#2c3e50' }}
+                            key={metric.current}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                          >
+                            {metric.current}
+                          </motion.h2>
+                          <div className="mb-2">
+                            <span 
+                              className={`badge px-3 py-2 rounded-pill`} 
+                              style={{ 
+                                fontSize: '0.95rem',
+                                background: `var(--bs-${metric.color})20`,
+                                border: `2px solid var(--bs-${metric.color})40`,
+                                color: `var(--bs-${metric.color})`
+                              }}
+                            >
                               <i className={`bi bi-arrow-${metric.trend === 'up' ? 'up' : 'down'}-circle-fill me-1`}></i>
                               {metric.change}
                             </span>
                           </div>
                         </div>
+                        <small className="text-muted">
+                          <i className="bi bi-clock-history me-1"></i>
+                          Comparado à safra anterior
+                        </small>
                       </div>
                       
                       <div className="col-auto text-end">
-                        <div className="mb-2">
-                          <small className="text-muted d-block mb-1" style={{ fontSize: '0.75rem' }}>PREVISÃO PRÓXIMA SAFRA</small>
-                          <div className={`h4 mb-0 fw-bold text-${metric.color}`}>{metric.prediction}</div>
+                        <div 
+                          className="rounded-3 p-3 mb-3"
+                          style={{
+                            background: selectedMetric === key 
+                              ? `linear-gradient(135deg, var(--bs-${metric.color})20 0%, var(--bs-${metric.color})10 100%)`
+                              : 'rgba(248, 249, 250, 0.5)',
+                            border: `2px solid ${selectedMetric === key ? `var(--bs-${metric.color})40` : 'rgba(0,0,0,0.05)'}`,
+                            minWidth: '180px'
+                          }}
+                        >
+                          <div className="d-flex align-items-center gap-2 mb-2">
+                            <i className="bi bi-stars" style={{ color: `var(--bs-${metric.color})`, fontSize: '1.2rem' }}></i>
+                            <small className="text-muted fw-semibold" style={{ fontSize: '0.7rem', letterSpacing: '0.5px' }}>
+                              PREVISÃO IA
+                            </small>
+                          </div>
+                          <motion.div 
+                            className={`h3 mb-0 fw-bold`}
+                            style={{ color: `var(--bs-${metric.color})` }}
+                            key={metric.prediction}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                          >
+                            {metric.prediction}
+                          </motion.div>
                         </div>
-                        <div className="d-flex align-items-center justify-content-end gap-2">
-                          {[1, 2, 3, 4, 5].map((bar) => (
-                            <div 
+                        <div className="d-flex align-items-end justify-content-end gap-1">
+                          {[1, 2, 3, 4, 5, 6, 7].map((bar) => (
+                            <motion.div 
                               key={bar}
-                              className={`bg-${metric.color} bg-opacity-${selectedMetric === key ? '75' : '25'}`}
+                              className={`bg-${metric.color}`}
+                              initial={{ height: 0 }}
+                              animate={{ 
+                                height: selectedMetric === key 
+                                  ? `${Math.random() * 35 + 25}px` 
+                                  : `${Math.random() * 20 + 15}px`,
+                                opacity: selectedMetric === key ? 0.8 : 0.3
+                              }}
+                              transition={{ duration: 0.5, delay: bar * 0.05 }}
                               style={{
-                                width: '4px',
-                                height: `${Math.random() * 30 + 20}px`,
-                                borderRadius: '2px',
+                                width: '5px',
+                                borderRadius: '3px 3px 0 0',
                                 transition: 'all 0.3s ease'
                               }}
                             />
@@ -200,9 +281,11 @@ const AnalyticsDemo = () => {
                   border: 'none',
                   color: 'white',
                   fontWeight: '600',
-                  fontSize: '1.1rem',
-                  boxShadow: isAnalyzing ? 'none' : '0 8px 25px rgba(40, 167, 69, 0.4)',
-                  transition: 'all 0.3s ease'
+                  fontSize: '1.15rem',
+                  boxShadow: isAnalyzing ? 'none' : '0 10px 30px rgba(40, 167, 69, 0.4)',
+                  transition: 'all 0.3s ease',
+                  cursor: isAnalyzing ? 'not-allowed' : 'pointer',
+                  opacity: isAnalyzing ? 0.7 : 1
                 }}
                 aria-label="Executar análise de dados com IA"
               >
@@ -214,7 +297,7 @@ const AnalyticsDemo = () => {
                 ) : (
                   <>
                     <i className="bi bi-cpu-fill me-2"></i>
-                    {showResults ? 'Executar Nova Análise' : 'Iniciar Análise Inteligente'}
+                    {showResults ? 'Executar Nova Análise' : 'Iniciar Análise Preditiva'}
                   </>
                 )}
               </motion.button>
@@ -226,16 +309,45 @@ const AnalyticsDemo = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="d-inline-flex align-items-center gap-3 px-5 py-3 rounded-pill" style={{ background: 'rgba(23, 162, 184, 0.1)', border: '1px solid rgba(23, 162, 184, 0.2)' }}>
-                    <div className="loading-spinner bi bi-gear-fill text-info" style={{ fontSize: '1.5rem' }}></div>
+                  <div className="d-inline-flex align-items-center gap-3 px-5 py-4 rounded-4" 
+                       style={{ 
+                         background: 'linear-gradient(135deg, rgba(23, 162, 184, 0.12) 0%, rgba(0, 123, 255, 0.12) 100%)', 
+                         border: '2px solid rgba(23, 162, 184, 0.3)',
+                         boxShadow: '0 8px 25px rgba(23, 162, 184, 0.2)'
+                       }}>
+                    <div className="loading-spinner bi bi-gear-fill text-info" style={{ fontSize: '2rem' }}></div>
                     <div className="text-start">
-                      <div className="fw-semibold text-dark">Processando dados em tempo real</div>
-                      <small className="text-muted">247.000 pontos • Machine Learning • Deep Analysis</small>
+                      <div className="fw-bold text-dark mb-1" style={{ fontSize: '1.05rem' }}>Processando dados em tempo real</div>
+                      <div className="d-flex gap-3">
+                        <small className="text-muted">
+                          <i className="bi bi-database me-1"></i>
+                          247.000 pontos
+                        </small>
+                        <small className="text-muted">
+                          <i className="bi bi-cpu me-1"></i>
+                          Machine Learning
+                        </small>
+                        <small className="text-muted">
+                          <i className="bi bi-graph-up me-1"></i>
+                          Deep Analysis
+                        </small>
+                      </div>
                     </div>
                   </div>
-                  <div className="mt-3 mx-auto" style={{ maxWidth: '400px' }}>
-                    <div className="progress" style={{ height: '6px', borderRadius: '10px', background: 'rgba(0,0,0,0.05)' }}>
-                      <div className="progress-bar progress-bar-striped progress-bar-animated bg-info" style={{ width: '100%' }}></div>
+                  <div className="mt-4 mx-auto" style={{ maxWidth: '500px' }}>
+                    <div className="d-flex justify-content-between mb-2">
+                      <small className="text-muted fw-semibold">Analisando padrões históricos...</small>
+                      <small className="text-info fw-bold">
+                        <i className="bi bi-arrow-clockwise loading-spinner me-1"></i>
+                        Em andamento
+                      </small>
+                    </div>
+                    <div className="progress" style={{ height: '10px', borderRadius: '10px', background: 'rgba(0,0,0,0.05)' }}>
+                      <div className="progress-bar progress-bar-striped progress-bar-animated" 
+                           style={{ 
+                             width: '100%',
+                             background: 'linear-gradient(90deg, #17a2b8 0%, #007bff 100%)'
+                           }}></div>
                     </div>
                   </div>
                 </motion.div>
@@ -251,12 +363,34 @@ const AnalyticsDemo = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                  <h4 className="fw-bold mb-0">
-                    <i className="bi bi-lightbulb-fill me-3" style={{ color: '#ffc107', fontSize: '1.8rem' }}></i>
-                    Recomendações Inteligentes
-                  </h4>
-                  <span className="badge bg-success text-white px-3 py-2 rounded-pill" style={{ fontSize: '0.95rem' }}>
+                <div className="d-flex justify-content-between align-items-center mb-5">
+                  <div>
+                    <h4 className="fw-bold mb-2 d-flex align-items-center gap-2">
+                      <div 
+                        className="rounded-3 d-flex align-items-center justify-content-center"
+                        style={{
+                          width: '48px',
+                          height: '48px',
+                          background: 'linear-gradient(135deg, #ffc107 0%, #e0a800 100%)',
+                          boxShadow: '0 6px 20px rgba(255, 193, 7, 0.3)'
+                        }}
+                      >
+                        <i className="bi bi-lightbulb-fill text-white" style={{ fontSize: '1.5rem' }}></i>
+                      </div>
+                      Recomendações Inteligentes
+                    </h4>
+                    <small className="text-muted ms-5 ps-3">
+                      <i className="bi bi-robot me-1"></i>
+                      Geradas por IA baseado em análise preditiva
+                    </small>
+                  </div>
+                  <span className="badge px-4 py-3 rounded-pill" 
+                        style={{ 
+                          fontSize: '1rem',
+                          background: 'linear-gradient(135deg, #28a745 0%, #20c997 100%)',
+                          color: 'white',
+                          boxShadow: '0 4px 15px rgba(40, 167, 69, 0.3)'
+                        }}>
                     <i className="bi bi-check-circle-fill me-2"></i>
                     {recommendations.length} Ações Identificadas
                   </span>
