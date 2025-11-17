@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Lara de Paula",
+      name: "Arthur de Sousa",
       role: "Software Engineer",
-      image: "/assets/img/ProfileLara.jpg",
-      linkedin: "https://www.linkedin.com/in/lara-de-paula-84b5a4264",
-      github: "https://github.com/lara-hdpb"
+      image: "/assets/img/ProfileArthur.jpeg",
+      linkedin: "https://www.linkedin.com/in/arthur-de-sousa-pereira-114879353/",
+      github: "https://github.com/ArthurSPereira1"
     },
     {
       name: "João Portugal",
@@ -15,6 +15,13 @@ const TeamSection = () => {
       image: "/assets/img/ProfileJoao.jpg",
       linkedin: "https://www.linkedin.com/in/joaoportugaldev",
       github: "https://github.com/joaoportugaldev"
+    },
+    {
+      name: "João Guilherme",
+      role: "Software Engineer",
+      image: "/assets/img/ProfileJoaoGuilherme.jpeg",
+      linkedin: "https://www.linkedin.com/in/jo%C3%A3o-guilherme-diniz-052363368/",
+      github: "https://github.com/1Jofla"
     },
     {
       name: "Diego Kanamori",
